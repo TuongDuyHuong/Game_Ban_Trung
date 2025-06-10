@@ -12,14 +12,18 @@ struct Egg {
     int x, y, c;
     Egg(int x = 0, int y = 0, int c = 1);
 };
-
-extern Egg arrEgg[100];
+#define sizeEgg 20
+#define lenRow 11
+#define maxEggCount 200
+#define startShootx 110
+#define startShooty 278
+extern Egg arrEgg[maxEggCount];
 extern int arrEggLen;
-extern int statusEgg[100];
-extern int visited[100];
-extern int desEgg[100];
+extern int statusEgg[maxEggCount];
+extern int visited[maxEggCount];
+extern int desEgg[maxEggCount];
 extern int desEggLen;
-extern int head[8];
+extern int head[lenRow+1];
 extern int headLen;
 extern int isEvenRow;
 int randColor();

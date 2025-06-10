@@ -117,10 +117,10 @@
           {
             "Type": "Image",
             "Name": "egg2",
-            "X": 57,
-            "Y": 280,
-            "Width": 32,
-            "Height": 32,
+            "X": 63,
+            "Y": 279,
+            "Width": 20,
+            "Height": 20,
             "RelativeFilename": "egg_green.png"
           },
           {
@@ -179,8 +179,8 @@
             "Height": 152,
             "RenderingAlgorithm": "Nearest-neighbor",
             "FileNameImage": "gun.png",
-            "XBitmapPosition": 44.0,
-            "YBitmapPosition": 11.0,
+            "XBitmapPosition": 56.0,
+            "YBitmapPosition": 34.3,
             "Scale": 1.0,
             "LockOrigoToCenter": true,
             "XOrigo": 76.0,
@@ -191,10 +191,10 @@
           {
             "Type": "Image",
             "Name": "egg1",
-            "X": 104,
-            "Y": 272,
-            "Width": 32,
-            "Height": 32,
+            "X": 110,
+            "Y": 278,
+            "Width": 20,
+            "Height": 20,
             "RelativeFilename": "egg_red.png"
           },
           {

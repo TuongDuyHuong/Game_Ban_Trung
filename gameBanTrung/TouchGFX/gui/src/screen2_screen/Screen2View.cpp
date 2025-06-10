@@ -3,27 +3,27 @@
 #include<math.h>
 #include <cstdlib>
 Egg::Egg(int x, int y, int c) : x(x), y(y), c(c) {}
-Egg arrEgg[100];
+Egg arrEgg[maxEggCount];
 int isEvenRow = 0;
 int arrEggLen = 0;
-int desEgg[100];
+int desEgg[maxEggCount];
 int desEggLen = 0;
-int statusEgg[100];
-int head[8];
+int statusEgg[maxEggCount];
+int head[lenRow+1];
 int headLen=0;
-int visited[100];
+int visited[maxEggCount];
 int randColor(){
     return rand() % 4 + 1;
 }
 void addRowEgg(){
     for(int i=0;i<arrEggLen;i++){
-        arrEgg[i].y+=32;
+        arrEgg[i].y+=sizeEgg;
     }
-    int addCount=(isEvenRow==0?7:6);
+    int addCount=(isEvenRow==0?lenRow:lenRow-1);
     // arrEggLen+=addCount;
     isEvenRow=1-isEvenRow;
     for(int i=0;i<addCount;i++){
-        arrEgg[arrEggLen++] = Egg(32*i-isEvenRow*16+24,0,randColor());
+        arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
     }
 }
 void destroyEgg(Egg e){
@@ -47,8 +47,8 @@ void standardization(Egg &e){
     for(int i=0;i<arrEggLen;i++){
         if(isCollide(arrEgg[i],e)){
             int centerx=arrEgg[i].x,centery=arrEgg[i].y;
-            int x[6]={centerx+16,centerx-16,centerx+32,centerx-32,centerx+16,centerx-16};
-            int y[6]={centery+32,centery+32,centery,centery,centery-32,centery-32};
+            int x[6]={centerx+sizeEgg/2,centerx-sizeEgg/2,centerx+sizeEgg,centerx-sizeEgg,centerx+sizeEgg/2,centerx-sizeEgg/2};
+            int y[6]={centery+sizeEgg,centery+sizeEgg,centery,centery,centery-sizeEgg,centery-sizeEgg};
             int indexMin = 0;
             int minDistance = distance(e,x[0],y[0]);
             for(int j=1;j<6;j++){
@@ -65,11 +65,11 @@ void standardization(Egg &e){
     }
     if(e.y==0){
     	//1:8 0:24
-    	int marginLeft = (isEvenRow==0?24:8);
-    	int x = (e.x-marginLeft)/32;
-    	if(distance(e,x*32+marginLeft,0)>distance(e,x*32+32+marginLeft,0)){
-    		e.x=x*32+32+marginLeft;
-    	} else e.x=x*32+marginLeft;
+    	int marginLeft = (1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2;
+    	int x = (e.x-marginLeft)/sizeEgg;
+    	if(distance(e,x*sizeEgg+marginLeft,0)>distance(e,x*sizeEgg+sizeEgg+marginLeft,0)){
+    		e.x=x*sizeEgg+sizeEgg+marginLeft;
+    	} else e.x=x*sizeEgg+marginLeft;
     }
 }
 int distance(Egg e,int x,int y){
@@ -77,7 +77,7 @@ int distance(Egg e,int x,int y){
 }
 void updateGridEgg(Egg e){
     standardization(e);
-    Egg tmp[100];
+    Egg tmp[maxEggCount];
     int tmpLen = 0;
     for(int i=0;i<arrEggLen;i++){
         if(arrEgg[i].c<5) {
@@ -135,7 +135,7 @@ void updateGridEgg(Egg e){
 //   }
 }
 void deleteEggDesAndFall(){
-	    Egg tmp[100];
+	    Egg tmp[maxEggCount];
 	    int tmpLen = 0;
 	    for(int i=0;i<arrEggLen;i++){
 	        if(arrEgg[i].c<5) {
@@ -150,7 +150,7 @@ void deleteEggDesAndFall(){
 int isCollide(Egg e1,Egg e2){
 	if(e1.c>4||e2.c>4) return 0;
     if(abs(e1.x - e2.x)==0&&abs(e1.y-e2.y)==0) return 0;
-    if(abs(e1.x - e2.x)<=32&&abs(e1.y-e2.y)<=32) return 1;
+    if(abs(e1.x - e2.x)<=sizeEgg&&abs(e1.y-e2.y)<=sizeEgg) return 1;
     return 0;
 }
 int isFinishGame(){
@@ -243,7 +243,7 @@ void Screen2View::handleTickEvent()
     if(isShoot==1){
     	Egg e = Egg(egg1.getX(),egg1.getY()-30,egg1Color);
     	if(isStop(e)==0&&egg1.getY()>=0){
-    	if(egg1.getX()<=0||egg1.getX()>=208) speedx = -speedx;
+    	if(egg1.getX()<=0||egg1.getX()>=(240-sizeEgg)) speedx = -speedx;
     	prex-=speedx;
     	prey-=speedy;
     	egg1.invalidate();
@@ -299,7 +299,7 @@ void Screen2View::handleTickEvent()
 		}
 		egg1.invalidate();
 		egg2.invalidate();
-		egg1.setXY(104,272);
+		egg1.setXY(startShootx,startShooty);
 		egg1Color=egg2Color;
 		egg2Color=randColor();
 		egg1.setBitmap(getEggBitmap(egg1Color));
