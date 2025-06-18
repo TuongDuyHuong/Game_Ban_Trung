@@ -5,7 +5,11 @@ struct Egg {
     int x, y, c;
     Egg(int x = 0, int y = 0, int c = 1);
 };
-
+#define sizeEgg 30 // kích thước của trứng
+#define lenRow 7 // số trứng tối đa trên 1 hàng
+#define maxEggCount 100 // giá trị tối đa của mảng lưu lưới trứng
+#define startShootx 110 // tọa độ đầu tiên của trứng trước khi bắn
+#define startShooty 278 
 int randColor(); // hàm rand() màu
 void addRowEgg();//hàm thêm hàng trứng trên cùng
 void destroyEgg(Egg e);// hàm phá hủy trứng
@@ -18,13 +22,13 @@ int isFinishGame();// hàm kiểm tra kết thúc game
 int isStop(Egg e);// hàm kiểm tra điều kiện dừng khi trứng đang bay( trứng bay khi được bắn ra)
 void deleteEggDesAndFall();// hàm xóa các phần tử có c=5 và 6 (trứng bị phá và bị rơi)
 // Exported game data
-extern Egg arrEgg[100];// mảng chứa lưới trứng hiện tại
-extern int arrEggLen; // số lượng phần tử
-extern int statusEgg[100];
-extern int visited[100];
-extern int desEgg[100];
+extern Egg arrEgg[maxEggCount];// mảng chứa lưới trứng hiện tại
+extern int arrEggLen;// số lượng phần tử
+extern int statusEgg[maxEggCount];
+extern int visited[maxEggCount];
+extern int desEgg[maxEggCount];
 extern int desEggLen;
-extern int head[8];
+extern int head[lenRow+1];
 extern int headLen;
 extern int isEvenRow;
 /*
