@@ -1,6 +1,7 @@
-#include "banTrung.h"
+#include "C:/TouchGFXProjects/MyApplication/Core/Inc/banTrung.h"
 #include<math.h>
 #include <cstdlib>
+// #include "stm32f4xx_hal.h" 
 Egg::Egg(int x, int y, int c) : x(x), y(y), c(c) {}
 Egg arrEgg[maxEggCount];
 int isEvenRow = 0;
@@ -14,6 +15,14 @@ int visited[maxEggCount];
 int randColor(){
     return rand() % 4 + 1;
 }
+// int randColor() {
+//     uint32_t randomNumber;
+//     if (HAL_RNG_GenerateRandomNumber(&hrng, &randomNumber) == HAL_OK) {
+//         return (randomNumber % 4) + 1; // Giá trị từ 1 đến 4
+//     } else {
+//         return 1; 
+//     }
+// }
 void addRowEgg(){
     for(int i=0;i<arrEggLen;i++){
         arrEgg[i].y+=sizeEgg;
@@ -25,23 +34,61 @@ void addRowEgg(){
         arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
     }
 }
-void destroyEgg(Egg e){
-    for(int i=0;i<arrEggLen;i++){
-        if(isCollide(arrEgg[i],e)&&arrEgg[i].c==e.c&&visited[i]==0){
-            desEgg[desEggLen++]=i;
-            visited[i]=1;
-            destroyEgg(arrEgg[i]);
+// void destroyEgg(Egg e){
+//     for(int i=0;i<arrEggLen;i++){
+//         if(isCollide(arrEgg[i],e)&&arrEgg[i].c==e.c&&visited[i]==0){
+//             desEgg[desEggLen++]=i;
+//             visited[i]=1;
+//             destroyEgg(arrEgg[i]);
+//         }
+//     }
+// }
+void destroyEgg(Egg e) {
+    Egg stack[maxEggCount]; // Đặt giới hạn kích thước phù hợp với ứng dụng
+    int top = -1;
+
+    // Đưa quả trứng đầu tiên vào ngăn xếp
+    stack[++top] = e;
+
+    while (top >= 0) {
+        // Lấy quả trứng từ ngăn xếp
+        Egg current = stack[top--];
+
+        for (int i = 0; i < arrEggLen; i++) {
+            if (isCollide(arrEgg[i], current) && arrEgg[i].c == current.c && visited[i] == 0) {
+                desEgg[desEggLen++] = i;
+                visited[i] = 1;
+                stack[++top] = arrEgg[i]; // Đưa quả trứng này vào ngăn xếp để xử lý tiếp
+            }
         }
     }
 }
-void updateStatus(Egg e){
-    for(int i=0;i<arrEggLen;i++){
-        if(isCollide(e,arrEgg[i])&&statusEgg[i]==0){
-            statusEgg[i]=2;
-            updateStatus(arrEgg[i]);
+void updateStatus(Egg e) {
+    Egg stack[maxEggCount]; // Tùy chỉnh kích thước phù hợp với hệ thống
+    int top = -1;
+
+    stack[++top] = e;
+
+    while (top >= 0) {
+        Egg current = stack[top--];
+
+        for (int i = 0; i < arrEggLen; i++) {
+            if (isCollide(current, arrEgg[i]) && statusEgg[i] == 0) {
+                statusEgg[i] = 2;
+                stack[++top] = arrEgg[i];
+            }
         }
     }
 }
+
+// void updateStatus(Egg e){
+//     for(int i=0;i<arrEggLen;i++){
+//         if(isCollide(e,arrEgg[i])&&statusEgg[i]==0){
+//             statusEgg[i]=2;
+//             updateStatus(arrEgg[i]);
+//         }
+//     }
+// }
 void standardization(Egg &e){
     for(int i=0;i<arrEggLen;i++){
         if(isCollide(arrEgg[i],e)){
