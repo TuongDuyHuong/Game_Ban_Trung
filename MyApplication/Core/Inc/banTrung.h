@@ -12,10 +12,11 @@ void destroyEgg(Egg e);// hàm phá hủy trứng
 void updateStatus(Egg e); // hàm cập nhật tình trạng trứng
 void standardization(Egg &e);// hàm chuẩn hóa vị trí trứng
 int distance(Egg e, int x, int y);// hàm tính khoảng cách
-void updateGridEgg(Egg e);// hàm cập nhật lưới trứng
+void updateGridEgg(Egg e);// hàm cập nhật lưới trứng đưa các trứng bị phá về c=5 bị rơi về c=6
 int isCollide(Egg e1, Egg e2);// hàm kiểm tra va chạm của 2 trứng
 int isFinishGame();// hàm kiểm tra kết thúc game
-
+int isStop(Egg e);// hàm kiểm tra điều kiện dừng khi trứng đang bay( trứng bay khi được bắn ra)
+void deleteEggDesAndFall();// hàm xóa các phần tử có c=5 và 6 (trứng bị phá và bị rơi)
 // Exported game data
 extern Egg arrEgg[100];// mảng chứa lưới trứng hiện tại
 extern int arrEggLen; // số lượng phần tử
