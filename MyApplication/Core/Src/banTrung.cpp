@@ -1,4 +1,4 @@
-#include "C:/TouchGFXProjects/MyApplication/Core/Inc/banTrung.h"
+#include "MyApplication/Core/Inc/banTrung.h"
 #include<math.h>
 #include <cstdlib>
 // #include "stm32f4xx_hal.h" 

@@ -10,6 +10,9 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="you_win" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">You Win</Translation>
+      </Text>
       <Text Id="T_GAMEOVER" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">New Text</Translation>
       </Text>

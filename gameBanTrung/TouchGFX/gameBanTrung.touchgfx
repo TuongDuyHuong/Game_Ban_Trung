@@ -61,7 +61,7 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionSlide",
               "ScreenTransitionDirection": "East",
-              "ActionComponent": "Screen2"
+              "ActionComponent": "Screen1_5"
             }
           }
         ]
@@ -211,6 +211,20 @@
             },
             "AutoSize": true,
             "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "win",
+            "X": 17,
+            "Y": 123,
+            "Width": 206,
+            "Height": 46,
+            "Visible": false,
+            "TextId": "you_win",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255
+            }
           }
         ],
         "Interactions": [
@@ -269,6 +283,169 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "Swap"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen1_5",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "codienButton_1",
+            "X": 21,
+            "Y": 210,
+            "Width": 198,
+            "Height": 85,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 198,
+                "Height": 85,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Clickable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "codienButton",
+            "X": 21,
+            "Y": 94,
+            "Width": 198,
+            "Height": 85,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 198,
+                "Height": 85,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Clickable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "a1_5.png"
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "home",
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "__generated\\icon_theme_images_action_home_30_30_FFFFFF.svg.png",
+            "Released": "__generated\\icon_theme_images_action_home_30_30_FFFFFF.svg.png",
+            "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+            "IconReleased": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+            "IconX": 97,
+            "IconHeight": 50,
+            "IconWidth": 50
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "chon_che_do_co_dien",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "codienButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "set_classic_mode"
+            }
+          },
+          {
+            "InteractionName": "chuyenmanhinhhiendai",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "chon_che_do_hien_dai"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen2"
+            }
+          },
+          {
+            "InteractionName": "chon_che_do_hien_dai",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "codienButton_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "set_new_mode"
+            }
+          },
+          {
+            "InteractionName": "chuyenmanhinhcodien",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "chon_che_do_co_dien"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen2"
+            }
+          },
+          {
+            "InteractionName": "tro_ve",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "home"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen1"
             }
           }
         ]
