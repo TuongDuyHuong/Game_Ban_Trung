@@ -63,6 +63,7 @@ protected:
     touchgfx::TextureMapper gun;
     touchgfx::Image egg1;
     touchgfx::FadeAnimator< touchgfx::TextArea > gameover;
+    touchgfx::TextArea win;
 
 private:
 

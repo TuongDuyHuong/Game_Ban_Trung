@@ -1,5 +1,5 @@
 #include <gui/screen2_screen/Screen2View.hpp>
-
+#include <gui/screen1_5_screen/Screen1_5View.hpp>
 #include<math.h>
 #include <cstdlib>
 Egg::Egg(int x, int y, int c) : x(x), y(y), c(c) {}
@@ -12,19 +12,26 @@ int statusEgg[maxEggCount];
 int head[lenRow+1];
 int headLen=0;
 int visited[maxEggCount];
+int gameMode;
+int number_of_lines;
 int randColor(){
     return rand() % 4 + 1;
 }
+
 void addRowEgg(){
-    for(int i=0;i<arrEggLen;i++){
-        arrEgg[i].y+=sizeEgg;
-    }
-    int addCount=(isEvenRow==0?lenRow:lenRow-1);
-    // arrEggLen+=addCount;
-    isEvenRow=1-isEvenRow;
-    for(int i=0;i<addCount;i++){
-        arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
-    }
+        for(int i=0;i<arrEggLen;i++){
+            arrEgg[i].y+=sizeEgg;
+        }
+        int addCount=(isEvenRow==0?lenRow:lenRow-1);
+        // arrEggLen+=addCount;
+        isEvenRow=1-isEvenRow;
+        for(int i=0;i<addCount;i++){
+            arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
+        }
+        if(gameMode==0){
+            number_of_lines--;
+        }
+        // waitTime -=2;
 }
 void destroyEgg(Egg e){
     for(int i=0;i<arrEggLen;i++){
@@ -282,7 +289,16 @@ void Screen2View::handleTickEvent()
 			}
 		}
     	deleteEggDesAndFall();
-    	addRowEgg();
+    	// addRowEgg();
+        if(number_of_lines==0) {
+            win.setVisible(true);
+            remove(win);
+            add(win);
+            win.invalidate();
+        }
+        else {
+            addRowEgg();
+        }
 		Show();
 		if(isFinishGame()==1){
 //    			gameover.setVisible(true);
@@ -323,7 +339,6 @@ void Screen2View::Shoot()
 	prey=egg1.getY();
 	}
 	isShoot=1;
-//	addRowEgg();
 //	Show();
 }
 void Screen2View::Left()

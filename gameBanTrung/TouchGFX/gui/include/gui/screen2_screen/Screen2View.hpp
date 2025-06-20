@@ -8,6 +8,7 @@
 #include <touchgfx/widgets/Image.hpp>
 #include <math.h>
 #include <stdio.h>
+
 struct Egg {
     int x, y, c;
     Egg(int x = 0, int y = 0, int c = 1);

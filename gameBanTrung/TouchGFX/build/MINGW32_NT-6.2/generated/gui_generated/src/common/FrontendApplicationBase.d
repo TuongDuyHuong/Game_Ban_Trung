@@ -85,6 +85,10 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
  generated/images/include/images/BitmapDatabase.hpp \
+ gui/include/gui/screen1_5_screen/Screen1_5View.hpp \
+ generated/gui_generated/include/gui_generated/screen1_5_screen/Screen1_5ViewBase.hpp \
+ gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -260,6 +264,14 @@ gui/include/gui/screen2_screen/Screen2Presenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
 
 generated/images/include/images/BitmapDatabase.hpp:
+
+gui/include/gui/screen1_5_screen/Screen1_5View.hpp:
+
+generated/gui_generated/include/gui_generated/screen1_5_screen/Screen1_5ViewBase.hpp:
+
+gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 
 generated/texts/include/texts/TextKeysAndLanguages.hpp:
 
