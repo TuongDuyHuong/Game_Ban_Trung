@@ -27,6 +27,7 @@ extern int desEggLen;
 extern int head[lenRow+1];
 extern int headLen;
 extern int isEvenRow;
+extern int isStopShoot;
 int randColor();
 void addRowEgg();
 void destroyEgg(Egg e);
@@ -61,7 +62,6 @@ public:
     float speedy=0;
     float prex,prey;
     int lines;
-    bool isStopShoot;
     int mode;
     touchgfx::BitmapId getEggBitmap(int color);
     touchgfx::Image image[100];
