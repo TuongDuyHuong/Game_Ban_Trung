@@ -17,22 +17,20 @@ int visited[maxEggCount];
 int gameMode;
 int number_of_lines;
 int isStopShoot = false;
+extern int lines,mode;
 int randColor(){
     return rand() % 4 + 1;
 }
 void addRowEgg(){
-    if( !isStopShoot ) {
-        for(int i=0;i<arrEggLen;i++){
-            arrEgg[i].y+=sizeEgg;
-        }
-        int addCount=(isEvenRow==0?lenRow:lenRow-1);
-        // arrEggLen+=addCount;
-        isEvenRow=1-isEvenRow;
-        for(int i=0;i<addCount;i++){
-            arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
-        }
+    for(int i=0;i<arrEggLen;i++){
+        arrEgg[i].y+=sizeEgg;
     }
-    else isStopShoot = false;
+    int addCount=(isEvenRow==0?lenRow:lenRow-1);
+    // arrEggLen+=addCount;
+    isEvenRow=1-isEvenRow;
+    for(int i=0;i<addCount;i++){
+        arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
+    }
 }
 void destroyEgg(Egg e){
     for(int i=0;i<arrEggLen;i++){
@@ -131,16 +129,6 @@ void updateGridEgg(Egg e){
                 break;
         }
     }
-//   tmpLen = 0;
-//   for(int i=0;i<arrEggLen;i++){
-//	   if(arrEgg[i].c<5) {
-//		   tmp[tmpLen++] = arrEgg[i];
-//	   }
-//   }
-//   arrEggLen=tmpLen;
-//   for(int i=0;i<arrEggLen;i++){
-//		   arrEgg[i]=tmp[i];
-//   }
 }
 void deleteEggDesAndFall(){
 	    Egg tmp[maxEggCount];
@@ -258,87 +246,7 @@ void Screen2View::handleTickEvent()
     	line.updateZAngle((tickCount%360)*3.14f/180);
     	rightEvent=0;
     }
-    // if(isShoot==1){
-    // 	Egg e = Egg(egg1.getX(),egg1.getY()-30,egg1Color);
-    // 	if(isStop(e)==0&&egg1.getY()>=0){
-    // 	if(egg1.getX()<=0||egg1.getX()>=(240-sizeEgg)) speedx = -speedx;
-    // 	prex-=speedx;
-    // 	prey-=speedy;
-    // 	egg1.invalidate();
-    // 	egg1.setXY(prex,prey);
-    // 	egg1.invalidate();
-    //     // addRowEgg();
-    // 	}else{
-    // 		isShoot=2;
-    // 		isFall=1;
-    // 		updateGridEgg(e);
-    // 	}
-    //     // addRowEgg();
-    // if(isFall==1){
-    // 	isFinishFall=1;
-	// 	for(int i=0;i<arrEggLen-1;i++){
-	// 		if(arrEgg[i].c==6||arrEgg[i].c==5){
-	// 			image[i].invalidate();
-	// 			image[i].setY(image[i].getY()+3);
-	// 			image[i].invalidate();
-	// 			if(image[i].getY()<320) isFinishFall=0;
-	// 		}
-	// 	}
-	// 	if(arrEgg[arrEggLen-1].c==5){
-	// 		egg1.invalidate();
-	// 		egg1.setY(egg1.getY()+3);
-	// 		egg1.invalidate();
-	// 		if(egg1.getY()<320) isFinishFall=0;
-	// 	}
-    // }
-    // if(isFinishFall==1)
-    // {
-    // 	isFall=0;
-    // 	isShoot=0;
-    // 	isFinishFall=0;
-    //     isStopShoot = true;
-    // 	for(int i=0;i<arrEggLen-1;i++)
-    //     {
-	// 		if(arrEgg[i].c==5)
-    //         {
-	// 			image[i].setVisible(true);
-	// 		}
-	// 	}
-    // 	deleteEggDesAndFall();
-    // }
-    // if(gameMode==0){
-    //     if(lines>0)
-    //     {
-    //         if(isStopShoot)
-    //             isStopShoot = false;
-    //         else 
-    //         {
-    //             addRowEgg();
-    //             lines--;
-    //         }
-    //     }
-    //     else
-    //     {
-    //         if( CountEggsonScreen()==0 )
-    //         {
-    //             application().gotoWin_ScreenScreenNoTransition();
-    //             number_of_lines++;
-    //         }
-    //     }
-    // }
-    // // }
-    // // else {
-    // //     addRowEgg();
-    // // }
-    // else if(gameMode==1){
-    //     if(isStopShoot) isStopShoot = false;
-    //     else
-    //     {
-    //         addRowEgg();
-    //         lines--;
-    //     }
-    // }
-     if(isShoot==1){
+    if(isShoot==1){
     	Egg e = Egg(egg1.getX(),egg1.getY()-30,egg1Color);
     	if(isStop(e)==0&&egg1.getY()>=30){
     	if(egg1.getX()<=0||egg1.getX()>=(240-sizeEgg)) speedx = -speedx;
@@ -361,7 +269,7 @@ void Screen2View::handleTickEvent()
 				image[i].invalidate();
 				image[i].setY(image[i].getY()+3);
 				image[i].invalidate();
-                isStopShoot = true;
+                if (!isStopShoot) isStopShoot= true;
 				if(image[i].getY()<320) isFinishFall=0;
 			}
 		}
@@ -382,54 +290,51 @@ void Screen2View::handleTickEvent()
 			}
 		}
     	deleteEggDesAndFall();
-    	addRowEgg();
-    //     if(gameMode == 1) {
-    //         if(isStopShoot) isStopShoot = false;
-    //         else addRowEgg();
-    //     }
-    //     if(gameMode==0){
-    //     if(lines>0)
-    //     {
-    //         if(isStopShoot)
-    //             isStopShoot = false;
-    //         else 
-    //         {
-    //             addRowEgg();
-    //             lines--;
-    //         }
-    //     }
-    //     else
-    //     {
-    //         if( CountEggsonScreen()==0 )
-    //         {
-    //             application().gotoWin_ScreenScreenNoTransition();
-    //             number_of_lines++;
-    //         }
-    //     }
-    // }
-    // }
-    // else {
-    //     addRowEgg();
-    // }
-    // else if(gameMode == 1) {
-    //     if(isStopShoot) isStopShoot = false;
-    //     else addRowEgg();
-    // }
-    Show();
-    if(isFinishGame()==1){
-        application().gotoLose_ScreenScreenNoTransition();
-        return;
-    }
-    egg1.invalidate();
-    egg2.invalidate();
-    egg1.setXY(startShootx,startShooty);
-    egg1Color=egg2Color;
-    egg2Color=randColor();
-    egg1.setBitmap(getEggBitmap(egg1Color));
-    egg2.setBitmap(getEggBitmap(egg2Color));
-    egg1.invalidate();
-    egg2.invalidate();
-    isShoot=0;
+        if(gameMode == 0)
+        {
+            if(CountEggsonScreen()==0)
+            {
+                if(lines ==0 ) {
+                    application().gotoWin_ScreenScreenNoTransition();
+                    number_of_lines ++;
+                    return;
+                }
+                else {
+                    lines--;
+                    addRowEgg();
+                }
+            }
+            else
+            {
+                if(lines !=0 && !isStopShoot)
+                {
+                    addRowEgg();
+                    lines--;
+                }
+            }
+        }
+        else 
+        {
+            //neu het trung thi cong diem
+            if(CountEggsonScreen()==0) addRowEgg();
+            else if(!isStopShoot) addRowEgg();
+            else isStopShoot = false;
+        }
+        Show();
+        if(isFinishGame()==1){
+            application().gotoLose_ScreenScreenNoTransition();
+            return;
+        }
+        egg1.invalidate();
+        egg2.invalidate();
+        egg1.setXY(startShootx,startShooty);
+        egg1Color=egg2Color;
+        egg2Color=randColor();
+        egg1.setBitmap(getEggBitmap(egg1Color));
+        egg2.setBitmap(getEggBitmap(egg2Color));
+        egg1.invalidate();
+        egg2.invalidate();
+        isShoot=0;
     }
 }
 
