@@ -1,7 +1,9 @@
 #include <gui/screen2_screen/Screen2View.hpp>
 #include <gui/screen1_5_screen/Screen1_5View.hpp>
+#include <gui/lose_screen_screen/Lose_ScreenView.hpp>
 #include<math.h>
 #include <cstdlib>
+#include <iostream>
 Egg::Egg(int x, int y, int c) : x(x), y(y), c(c) {}
 Egg arrEgg[maxEggCount];
 int isEvenRow = 0;
@@ -17,7 +19,6 @@ int number_of_lines;
 int randColor(){
     return rand() % 4 + 1;
 }
-
 void addRowEgg(){
         for(int i=0;i<arrEggLen;i++){
             arrEgg[i].y+=sizeEgg;
@@ -27,9 +28,6 @@ void addRowEgg(){
         isEvenRow=1-isEvenRow;
         for(int i=0;i<addCount;i++){
             arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
-        }
-        if(gameMode==0){
-            number_of_lines--;
         }
         // waitTime -=2;
 }
@@ -204,7 +202,16 @@ void Screen2View::Show() {
     }
 }
 
-
+int CountEggsonScreen()
+{
+    int count = 0;
+    for (int i = 0; i < arrEggLen; i++) {
+        if (arrEgg[i].c < 5) {
+            count++;
+        }
+    }
+    return count;
+}
 
 Screen2View::Screen2View()
 {
@@ -216,6 +223,8 @@ void Screen2View::setupScreen()
     Screen2ViewBase::setupScreen();
     arrEggLen=0;
     isEvenRow=0;
+    lines = number_of_lines;
+    isStopShoot = false;
     egg1Color = randColor();
     egg2Color = randColor();
     egg1.setBitmap(getEggBitmap(egg1Color));
@@ -247,7 +256,87 @@ void Screen2View::handleTickEvent()
     	line.updateZAngle((tickCount%360)*3.14f/180);
     	rightEvent=0;
     }
-    if(isShoot==1){
+    // if(isShoot==1){
+    // 	Egg e = Egg(egg1.getX(),egg1.getY()-30,egg1Color);
+    // 	if(isStop(e)==0&&egg1.getY()>=0){
+    // 	if(egg1.getX()<=0||egg1.getX()>=(240-sizeEgg)) speedx = -speedx;
+    // 	prex-=speedx;
+    // 	prey-=speedy;
+    // 	egg1.invalidate();
+    // 	egg1.setXY(prex,prey);
+    // 	egg1.invalidate();
+    //     // addRowEgg();
+    // 	}else{
+    // 		isShoot=2;
+    // 		isFall=1;
+    // 		updateGridEgg(e);
+    // 	}
+    //     // addRowEgg();
+    // if(isFall==1){
+    // 	isFinishFall=1;
+	// 	for(int i=0;i<arrEggLen-1;i++){
+	// 		if(arrEgg[i].c==6||arrEgg[i].c==5){
+	// 			image[i].invalidate();
+	// 			image[i].setY(image[i].getY()+3);
+	// 			image[i].invalidate();
+	// 			if(image[i].getY()<320) isFinishFall=0;
+	// 		}
+	// 	}
+	// 	if(arrEgg[arrEggLen-1].c==5){
+	// 		egg1.invalidate();
+	// 		egg1.setY(egg1.getY()+3);
+	// 		egg1.invalidate();
+	// 		if(egg1.getY()<320) isFinishFall=0;
+	// 	}
+    // }
+    // if(isFinishFall==1)
+    // {
+    // 	isFall=0;
+    // 	isShoot=0;
+    // 	isFinishFall=0;
+    //     isStopShoot = true;
+    // 	for(int i=0;i<arrEggLen-1;i++)
+    //     {
+	// 		if(arrEgg[i].c==5)
+    //         {
+	// 			image[i].setVisible(true);
+	// 		}
+	// 	}
+    // 	deleteEggDesAndFall();
+    // }
+    // if(gameMode==0){
+    //     if(lines>0)
+    //     {
+    //         if(isStopShoot)
+    //             isStopShoot = false;
+    //         else 
+    //         {
+    //             addRowEgg();
+    //             lines--;
+    //         }
+    //     }
+    //     else
+    //     {
+    //         if( CountEggsonScreen()==0 )
+    //         {
+    //             application().gotoWin_ScreenScreenNoTransition();
+    //             number_of_lines++;
+    //         }
+    //     }
+    // }
+    // // }
+    // // else {
+    // //     addRowEgg();
+    // // }
+    // else if(gameMode==1){
+    //     if(isStopShoot) isStopShoot = false;
+    //     else
+    //     {
+    //         addRowEgg();
+    //         lines--;
+    //     }
+    // }
+     if(isShoot==1){
     	Egg e = Egg(egg1.getX(),egg1.getY()-30,egg1Color);
     	if(isStop(e)==0&&egg1.getY()>=0){
     	if(egg1.getX()<=0||egg1.getX()>=(240-sizeEgg)) speedx = -speedx;
@@ -283,48 +372,65 @@ void Screen2View::handleTickEvent()
     	isFall=0;
     	isShoot=0;
     	isFinishFall=0;
+        isStopShoot = true;
     	for(int i=0;i<arrEggLen-1;i++){
 			if(arrEgg[i].c==5){
 				image[i].setVisible(true);
 			}
 		}
     	deleteEggDesAndFall();
-    	// addRowEgg();
-        if(number_of_lines==0) {
-            win.setVisible(true);
-            remove(win);
-            add(win);
-            win.invalidate();
-        }
-        else {
-            addRowEgg();
-        }
-		Show();
-		if(isFinishGame()==1){
-//    			gameover.setVisible(true);
-//    			gameover.invalidate();
-//    			gameover.front();
-			 gameover.setVisible(true);
-
-
-				remove(gameover);
-				add(gameover);
-
-				gameover.invalidate();
-			return;
-		}
-		egg1.invalidate();
-		egg2.invalidate();
-		egg1.setXY(startShootx,startShooty);
-		egg1Color=egg2Color;
-		egg2Color=randColor();
-		egg1.setBitmap(getEggBitmap(egg1Color));
-		egg2.setBitmap(getEggBitmap(egg2Color));
-		egg1.invalidate();
-		egg2.invalidate();
-		isShoot=0;
     }
-}
+    	//addRowEgg();
+        if(gameMode==0){
+        if(lines>0)
+        {
+            if(isStopShoot)
+                isStopShoot = false;
+            else 
+            {
+                addRowEgg();
+                lines--;
+            }
+        }
+        else
+        {
+            if( CountEggsonScreen()==0 )
+            {
+                application().gotoWin_ScreenScreenNoTransition();
+                number_of_lines++;
+            }
+        }
+    }
+    // }
+    // else {
+    //     addRowEgg();
+    // }
+    else if(gameMode==1){
+        if(isStopShoot) isStopShoot = false;
+        else
+        {
+            addRowEgg();
+            lines--;
+        }
+    }
+    Show();
+    if(isFinishGame()==1){
+        application().gotoLose_ScreenScreenNoTransition();
+        return;
+    }
+    egg1.invalidate();
+    egg2.invalidate();
+    egg1.setXY(startShootx,startShooty);
+    egg1Color=egg2Color;
+    egg2Color=randColor();
+    egg1.setBitmap(getEggBitmap(egg1Color));
+    egg2.setBitmap(getEggBitmap(egg2Color));
+    egg1.invalidate();
+    egg2.invalidate();
+    isShoot=0;
+    }
+// }
+
 void Screen2View::Shoot()
 {
 	if(isShoot==0){
@@ -359,3 +465,5 @@ void Screen2View::Swap()
 	egg1.invalidate();
 	egg2.invalidate();
 }
+
+

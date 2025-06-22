@@ -12,9 +12,6 @@
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextureMapper.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/EasingEquations.hpp>
-#include <touchgfx/mixins/FadeAnimator.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -62,8 +59,6 @@ protected:
     touchgfx::TextureMapper line;
     touchgfx::TextureMapper gun;
     touchgfx::Image egg1;
-    touchgfx::FadeAnimator< touchgfx::TextArea > gameover;
-    touchgfx::TextArea win;
 
 private:
 

@@ -20,6 +20,10 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <gui/screen1_5_screen/Screen1_5View.hpp>
 #include <gui/screen1_5_screen/Screen1_5Presenter.hpp>
+#include <gui/win_screen_screen/Win_ScreenView.hpp>
+#include <gui/win_screen_screen/Win_ScreenPresenter.hpp>
+#include <gui/lose_screen_screen/Lose_ScreenView.hpp>
+#include <gui/lose_screen_screen/Lose_ScreenPresenter.hpp>
 
 
 /**
@@ -45,7 +49,9 @@ public:
     typedef touchgfx::meta::TypeList< Screen1View,
             touchgfx::meta::TypeList< Screen2View,
             touchgfx::meta::TypeList< Screen1_5View,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< Win_ScreenView,
+            touchgfx::meta::TypeList< Lose_ScreenView,
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -60,7 +66,9 @@ public:
     typedef touchgfx::meta::TypeList< Screen1Presenter,
             touchgfx::meta::TypeList< Screen2Presenter,
             touchgfx::meta::TypeList< Screen1_5Presenter,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< Win_ScreenPresenter,
+            touchgfx::meta::TypeList< Lose_ScreenPresenter,
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**

@@ -13,12 +13,12 @@ Screen1_5ViewBase::Screen1_5ViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    codienButton_1.setBoxWithBorderPosition(0, 0, 198, 85);
-    codienButton_1.setBorderSize(5);
-    codienButton_1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    codienButton_1.setAction(flexButtonCallback);
-    codienButton_1.setPosition(21, 210, 198, 85);
-    add(codienButton_1);
+    hiendaiButton.setBoxWithBorderPosition(0, 0, 198, 85);
+    hiendaiButton.setBorderSize(5);
+    hiendaiButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    hiendaiButton.setAction(flexButtonCallback);
+    hiendaiButton.setPosition(21, 210, 198, 85);
+    add(hiendaiButton);
 
     codienButton.setBoxWithBorderPosition(0, 0, 198, 85);
     codienButton.setBorderSize(5);
@@ -62,10 +62,10 @@ void Screen1_5ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButton
         //Go to Screen2 with no screen transition
         application().gotoScreen2ScreenNoTransition();
     }
-    if (&src == &codienButton_1)
+    if (&src == &hiendaiButton)
     {
         //chon_che_do_hien_dai
-        //When codienButton_1 clicked call virtual function
+        //When hiendaiButton clicked call virtual function
         //Call set_new_mode
         set_new_mode();
     

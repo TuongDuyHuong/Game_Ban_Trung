@@ -196,35 +196,6 @@
             "Width": 20,
             "Height": 20,
             "RelativeFilename": "egg_red.png"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "gameover",
-            "Y": 129,
-            "Width": 242,
-            "Height": 41,
-            "Visible": false,
-            "TextId": "gameover",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "win",
-            "X": 17,
-            "Y": 123,
-            "Width": 206,
-            "Height": 46,
-            "Visible": false,
-            "TextId": "you_win",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255
-            }
           }
         ],
         "Interactions": [
@@ -284,6 +255,28 @@
               "Type": "ActionCustom",
               "FunctionName": "Swap"
             }
+          },
+          {
+            "InteractionName": "chuyen_man_hinh_thang",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Win_Screen"
+            }
+          },
+          {
+            "InteractionName": "chuyen_man_hinh_thua",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Lose_Screen"
+            }
           }
         ]
       },
@@ -292,7 +285,7 @@
         "Components": [
           {
             "Type": "FlexButton",
-            "Name": "codienButton_1",
+            "Name": "hiendaiButton",
             "X": 21,
             "Y": 210,
             "Width": 198,
@@ -417,7 +410,7 @@
             "HasCompletedTrigger": true,
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "codienButton_1"
+              "TriggerComponent": "hiendaiButton"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -441,6 +434,144 @@
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "home"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen1"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Win_Screen",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "X": 87,
+            "Y": 224,
+            "Width": 58,
+            "Height": 50,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 58,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "win_screen.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "khoitaonextlevel",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "nextlevel"
+            }
+          },
+          {
+            "InteractionName": "chuyenmanhinhnextlevel",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "khoitaonextlevel"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen2"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Lose_Screen",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "X": 48,
+            "Y": 227,
+            "Width": 130,
+            "Height": 60,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 130,
+                "Height": 60,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "lose_screen.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
             },
             "Action": {
               "Type": "ActionGotoScreen",

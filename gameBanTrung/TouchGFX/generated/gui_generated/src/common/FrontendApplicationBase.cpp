@@ -15,6 +15,10 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <gui/screen1_5_screen/Screen1_5View.hpp>
 #include <gui/screen1_5_screen/Screen1_5Presenter.hpp>
+#include <gui/win_screen_screen/Win_ScreenView.hpp>
+#include <gui/win_screen_screen/Win_ScreenPresenter.hpp>
+#include <gui/lose_screen_screen/Lose_ScreenView.hpp>
+#include <gui/lose_screen_screen/Lose_ScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -83,4 +87,30 @@ void FrontendApplicationBase::gotoScreen1_5ScreenSlideTransitionEast()
 void FrontendApplicationBase::gotoScreen1_5ScreenSlideTransitionEastImpl()
 {
     touchgfx::makeTransition<Screen1_5View, Screen1_5Presenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Win_Screen
+
+void FrontendApplicationBase::gotoWin_ScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoWin_ScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoWin_ScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Win_ScreenView, Win_ScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Lose_Screen
+
+void FrontendApplicationBase::gotoLose_ScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoLose_ScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoLose_ScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Lose_ScreenView, Lose_ScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

@@ -38,6 +38,7 @@ int isCollide(Egg e1, Egg e2);
 int isFinishGame();
 int isStop(Egg e);
 void deleteEggDesAndFall();
+int CountEggsonScreen();
 class Screen2View : public Screen2ViewBase
 {
 public:
@@ -53,12 +54,15 @@ public:
     uint32_t tickCount = 290;
     int leftEvent = 0;
     int rightEvent = 0;
-    int egg1Color = 1;
-    int egg2Color = 2;
+    int egg1Color;
+    int egg2Color;
     int isShoot=0;
     float speedx=0;
     float speedy=0;
     float prex,prey;
+    int lines;
+    bool isStopShoot;
+    int mode;
     touchgfx::BitmapId getEggBitmap(int color);
     touchgfx::Image image[100];
     int imageLen=0;

@@ -41,7 +41,7 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ClickListener< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  > codienButton_1;
+    touchgfx::ClickListener< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  > hiendaiButton;
     touchgfx::ClickListener< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  > codienButton;
     touchgfx::Image image1;
     touchgfx::ButtonWithIcon home;

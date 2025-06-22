@@ -107,11 +107,16 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
  gui/include/gui/screen1_5_screen/Screen1_5View.hpp \
  generated/gui_generated/include/gui_generated/screen1_5_screen/Screen1_5ViewBase.hpp \
  gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
+ gui/include/gui/win_screen_screen/Win_ScreenView.hpp \
+ generated/gui_generated/include/gui_generated/win_screen_screen/Win_ScreenViewBase.hpp \
+ gui/include/gui/win_screen_screen/Win_ScreenPresenter.hpp \
+ gui/include/gui/lose_screen_screen/Lose_ScreenView.hpp \
+ generated/gui_generated/include/gui_generated/lose_screen_screen/Lose_ScreenViewBase.hpp \
+ gui/include/gui/lose_screen_screen/Lose_ScreenPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
@@ -353,8 +358,6 @@ gui/include/gui/screen2_screen/Screen2Presenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
-
 gui/include/gui/screen1_5_screen/Screen1_5View.hpp:
 
 generated/gui_generated/include/gui_generated/screen1_5_screen/Screen1_5ViewBase.hpp:
@@ -362,6 +365,18 @@ generated/gui_generated/include/gui_generated/screen1_5_screen/Screen1_5ViewBase
 gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
+
+gui/include/gui/win_screen_screen/Win_ScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/win_screen_screen/Win_ScreenViewBase.hpp:
+
+gui/include/gui/win_screen_screen/Win_ScreenPresenter.hpp:
+
+gui/include/gui/lose_screen_screen/Lose_ScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/lose_screen_screen/Lose_ScreenViewBase.hpp:
+
+gui/include/gui/lose_screen_screen/Lose_ScreenPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 

@@ -208,6 +208,30 @@
     <Filter Include="Source Files\generated\gui_generated\screen1_5_screen">
       <UniqueIdentifier>0BC53159-8079-A79F-2ECB-8D42F8D1B315</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\win_screen_screen">
+      <UniqueIdentifier>0E68CFEA-A11C-6E5F-AE44-5D5AE3A8FA7C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\lose_screen_screen">
+      <UniqueIdentifier>6F3BDB87-68A6-2BA4-262A-98F7741A503D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\win_screen_screen">
+      <UniqueIdentifier>4821FF6B-6E47-1BF0-D35A-EA5698D3579A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\lose_screen_screen">
+      <UniqueIdentifier>487DAD66-4D59-EAFE-0895-441D045647F0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\lose_screen_screen">
+      <UniqueIdentifier>F0FBB91D-A559-6697-08F4-823FA2470BD3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\lose_screen_screen">
+      <UniqueIdentifier>4D0369DF-D414-F3F2-9E1B-7261E42A9954</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\win_screen_screen">
+      <UniqueIdentifier>FC5C3C95-957A-9859-7243-F7FEC5AD7C26</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\win_screen_screen">
+      <UniqueIdentifier>0AAE1C34-DED6-3670-5060-113B31AC31BB</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -266,6 +290,24 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen1_5_screen\Screen1_5ViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen1_5_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\lose_screen_screen\Lose_ScreenPresenter.cpp">
+      <Filter>Source Files\gui\lose_screen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\lose_screen_screen\Lose_ScreenView.cpp">
+      <Filter>Source Files\gui\lose_screen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\lose_screen_screen\Lose_ScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\lose_screen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\win_screen_screen\Win_ScreenPresenter.cpp">
+      <Filter>Source Files\gui\win_screen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\win_screen_screen\Win_ScreenView.cpp">
+      <Filter>Source Files\gui\win_screen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\win_screen_screen\Win_ScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\win_screen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -735,6 +777,24 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_5_screen\Screen1_5ViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen1_5_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\lose_screen_screen\Lose_ScreenPresenter.hpp">
+      <Filter>Header Files\gui\lose_screen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\lose_screen_screen\Lose_ScreenView.hpp">
+      <Filter>Header Files\gui\lose_screen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\lose_screen_screen\Lose_ScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\lose_screen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\win_screen_screen\Win_ScreenPresenter.hpp">
+      <Filter>Header Files\gui\win_screen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\win_screen_screen\Win_ScreenView.hpp">
+      <Filter>Header Files\gui\win_screen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\win_screen_screen\Win_ScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\win_screen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
