@@ -1,4 +1,4 @@
-#include "C:/TouchGFXProjects/MyApplication/Core/Inc/banTrung.h"
+#include "MyApplication/Core/Inc/banTrung.h"
 #include<math.h>
 #include <cstdlib>
 // #include "stm32f4xx_hal.h" 
@@ -12,6 +12,8 @@ int statusEgg[maxEggCount];
 int head[lenRow+1];
 int headLen=0;
 int visited[maxEggCount];
+extern int maxCountRow;
+extern int countRow;
 int randColor(){
     return rand() % 4 + 1;
 }
@@ -24,6 +26,8 @@ int randColor(){
 //     }
 // }
 void addRowEgg(){
+    if(maxCountRow<0);
+    else if(countRow>=maxCountRow) return;
     for(int i=0;i<arrEggLen;i++){
         arrEgg[i].y+=sizeEgg;
     }
@@ -33,6 +37,7 @@ void addRowEgg(){
     for(int i=0;i<addCount;i++){
         arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
     }
+    countRow++;
 }
 // void destroyEgg(Egg e){
 //     for(int i=0;i<arrEggLen;i++){
@@ -200,4 +205,7 @@ int isStop(Egg e){
 		if(isCollide(e,arrEgg[i])==1) return 1;
 	}
 	return 0;
+}
+int isWin(){
+    return arrEggLen<=0;
 }

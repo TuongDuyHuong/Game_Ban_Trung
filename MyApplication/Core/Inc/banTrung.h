@@ -21,7 +21,10 @@ int isCollide(Egg e1, Egg e2);// hàm kiểm tra va chạm của 2 trứng
 int isFinishGame();// hàm kiểm tra kết thúc game
 int isStop(Egg e);// hàm kiểm tra điều kiện dừng khi trứng đang bay( trứng bay khi được bắn ra)
 void deleteEggDesAndFall();// hàm xóa các phần tử có c=5 và 6 (trứng bị phá và bị rơi)
+int isWin();// kiểm tra win chưa
 // Exported game data
+int maxCountRow;// số hàng tối đa, nếu bằng -1 thì có nghĩa là không giới hạn số hàng
+int countRow=0;//số hàng trứng hiện tại
 extern Egg arrEgg[maxEggCount];// mảng chứa lưới trứng hiện tại
 extern int arrEggLen;// số lượng phần tử
 extern int statusEgg[maxEggCount];
