@@ -306,11 +306,16 @@ void Screen2View::handleTickEvent()
             }
             else
             {
-                if(lines !=0 && !isStopShoot)
+                if (!isStopShoot)
                 {
-                    addRowEgg();
-                    lines--;
+                    if(lines !=0 )
+                    {
+                        addRowEgg();
+                        lines--;
+                    }
                 }
+                else isStopShoot = false;
+                
             }
         }
         else 

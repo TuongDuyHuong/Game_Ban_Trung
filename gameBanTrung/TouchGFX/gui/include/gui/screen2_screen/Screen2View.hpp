@@ -13,11 +13,11 @@ struct Egg {
     int x, y, c;
     Egg(int x = 0, int y = 0, int c = 1);
 };
-#define sizeEgg 20
-#define lenRow 11
-#define maxEggCount 200
-#define startShootx 110
-#define startShooty 278
+#define sizeEgg 24
+#define lenRow 10
+#define maxEggCount 100
+#define startShootx 108
+#define startShooty 279
 extern Egg arrEgg[maxEggCount];
 extern int arrEggLen;
 extern int statusEgg[maxEggCount];

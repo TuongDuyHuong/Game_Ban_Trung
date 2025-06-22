@@ -49,7 +49,7 @@ Screen2ViewBase::Screen2ViewBase() :
     shoot.setAction(buttonCallback);
     add(shoot);
 
-    line.setXY(-32, 136);
+    line.setXY(-30, 136);
     line.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_ANALOGCLOCK_HANDS_LARGE_SECOND_PLAIN_LIGHT_ID));
     line.setWidth(304);
     line.setHeight(304);
@@ -66,7 +66,7 @@ Screen2ViewBase::Screen2ViewBase() :
     gun.setBitmap(touchgfx::Bitmap(BITMAP_GUN_ID));
     gun.setWidth(152);
     gun.setHeight(152);
-    gun.setBitmapPosition(56.0f, 34.3f);
+    gun.setBitmapPosition(52.0f, 27.0f);
     gun.setScale(1.0f);
     gun.setCameraDistance(1000.0f);
     gun.setOrigo(76.0f, 76.0f, 1000.0f);
@@ -75,7 +75,7 @@ Screen2ViewBase::Screen2ViewBase() :
     gun.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
     add(gun);
 
-    egg1.setXY(110, 278);
+    egg1.setXY(110, 279);
     egg1.setBitmap(touchgfx::Bitmap(BITMAP_EGG_RED_ID));
     add(egg1);
 }

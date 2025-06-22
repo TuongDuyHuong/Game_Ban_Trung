@@ -119,8 +119,8 @@
             "Name": "egg2",
             "X": 63,
             "Y": 279,
-            "Width": 20,
-            "Height": 20,
+            "Width": 24,
+            "Height": 24,
             "RelativeFilename": "egg_green.png"
           },
           {
@@ -156,7 +156,7 @@
           {
             "Type": "TextureMapper",
             "Name": "line",
-            "X": -32,
+            "X": -30,
             "Y": 136,
             "Width": 304,
             "Height": 304,
@@ -179,8 +179,8 @@
             "Height": 152,
             "RenderingAlgorithm": "Nearest-neighbor",
             "FileNameImage": "gun.png",
-            "XBitmapPosition": 56.0,
-            "YBitmapPosition": 34.3,
+            "XBitmapPosition": 52.0,
+            "YBitmapPosition": 27.0,
             "Scale": 1.0,
             "LockOrigoToCenter": true,
             "XOrigo": 76.0,
@@ -192,9 +192,9 @@
             "Type": "Image",
             "Name": "egg1",
             "X": 110,
-            "Y": 278,
-            "Width": 20,
-            "Height": 20,
+            "Y": 279,
+            "Width": 24,
+            "Height": 24,
             "RelativeFilename": "egg_red.png"
           }
         ],
