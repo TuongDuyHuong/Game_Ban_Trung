@@ -13,6 +13,7 @@ enum LANGUAGES
 enum TEXTS
 {
     T_GAMEOVER,
+    T_YOU_WIN,
     T_T_GAMEOVER,
     NUMBER_OF_TEXT_KEYS
 };

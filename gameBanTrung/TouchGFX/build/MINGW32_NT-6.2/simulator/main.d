@@ -107,6 +107,10 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
+ gui/include/gui/screen1_5_screen/Screen1_5View.hpp \
+ generated/gui_generated/include/gui_generated/screen1_5_screen/Screen1_5ViewBase.hpp \
+ gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/SDL2TouchController.hpp \
  generated/simulator/include/simulator/mainBase.hpp
@@ -326,6 +330,14 @@ gui/include/gui/screen2_screen/Screen2Presenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
+
+gui/include/gui/screen1_5_screen/Screen1_5View.hpp:
+
+generated/gui_generated/include/gui_generated/screen1_5_screen/Screen1_5ViewBase.hpp:
+
+gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 
 generated/gui_generated/include/gui_generated/common/SimConstants.hpp:
 

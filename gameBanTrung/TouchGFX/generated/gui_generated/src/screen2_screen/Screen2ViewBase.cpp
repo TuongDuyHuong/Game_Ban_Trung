@@ -86,6 +86,13 @@ Screen2ViewBase::Screen2ViewBase() :
     gameover.setTypedText(touchgfx::TypedText(T_GAMEOVER));
     gameover.setVisible(false);
     add(gameover);
+
+    win.setPosition(17, 123, 206, 46);
+    win.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    win.setLinespacing(0);
+    win.setTypedText(touchgfx::TypedText(T_YOU_WIN));
+    win.setVisible(false);
+    add(win);
 }
 
 Screen2ViewBase::~Screen2ViewBase()

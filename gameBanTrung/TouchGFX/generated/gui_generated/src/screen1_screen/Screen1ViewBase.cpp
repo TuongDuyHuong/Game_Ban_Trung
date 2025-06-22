@@ -40,8 +40,8 @@ void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCo
     if (&src == &flexButton1)
     {
         //Interaction1
-        //When flexButton1 clicked change screen to Screen2
-        //Go to Screen2 with screen transition towards East
-        application().gotoScreen2ScreenSlideTransitionEast();
+        //When flexButton1 clicked change screen to Screen1_5
+        //Go to Screen1_5 with screen transition towards East
+        application().gotoScreen1_5ScreenSlideTransitionEast();
     }
 }
