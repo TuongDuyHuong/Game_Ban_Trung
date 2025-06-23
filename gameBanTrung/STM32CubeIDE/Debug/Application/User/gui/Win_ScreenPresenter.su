@@ -1,5 +1,0 @@
-../../TouchGFX/gui/include/gui/win_screen_screen/Win_ScreenPresenter.hpp:28:13:Win_ScreenPresenter::~Win_ScreenPresenter()	0	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenPresenter.cpp:10:6:virtual void Win_ScreenPresenter::activate()	0	static
-../../TouchGFX/gui/include/gui/win_screen_screen/Win_ScreenPresenter.hpp:28:13:virtual Win_ScreenPresenter::~Win_ScreenPresenter()	8	static
-../../TouchGFX/gui/include/gui/win_screen_screen/Win_ScreenPresenter.hpp:28:13:virtual void* Win_ScreenPresenter::_ZThn4_N19Win_ScreenPresenterD1Ev()	0	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenPresenter.cpp:4:1:Win_ScreenPresenter::Win_ScreenPresenter(Win_ScreenView&)	0	static
