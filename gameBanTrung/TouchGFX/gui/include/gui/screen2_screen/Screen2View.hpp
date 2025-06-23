@@ -18,7 +18,6 @@ struct Egg {
 #define maxEggCount 100
 #define startShootx 108
 #define startShooty 279
-#define POINT_SIZE 10
 extern Egg arrEgg[maxEggCount];
 extern int arrEggLen;
 extern int statusEgg[maxEggCount];
@@ -29,15 +28,13 @@ extern int head[lenRow+1];
 extern int headLen;
 extern int isEvenRow;
 extern int isStopShoot;
-extern int oldScore;
-extern int finalScore;
 int randColor();
 void addRowEgg();
 void destroyEgg(Egg e);
 void updateStatus(Egg e);
 void standardization(Egg &e);
 int distance(Egg e, int x, int y);
-void updateGridEgg(Egg e);
+void updateGridEgg(Egg &e);
 int isCollide(Egg e1, Egg e2);
 int isFinishGame();
 int isStop(Egg e);
