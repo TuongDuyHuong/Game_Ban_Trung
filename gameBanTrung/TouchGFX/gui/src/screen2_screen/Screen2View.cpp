@@ -26,10 +26,11 @@ extern int lines;
 //=======
 extern uint16_t joystickX;
 extern uint16_t btShoot;
+static uint32_t seed = 1;
 // >>>>>>> 491ddca3bae796dbc68b54778639f2c8ff327626
 int randColor(){
-    // return rand()%4+1;
-    return 1;
+	seed = seed * 1103515245 + 12345;
+	return (seed % 4) + 1;  // kết quả là 1, 2, 3 hoặc 4;
 }
 void addRowEgg(){
     for(int i=0;i<arrEggLen;i++){
