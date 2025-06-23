@@ -15,7 +15,7 @@ struct Egg {
 };
 #define sizeEgg 24
 #define lenRow 10
-#define maxEggCount 100
+#define maxEggCount 90
 #define startShootx 108
 #define startShooty 279
 extern Egg arrEgg[maxEggCount];

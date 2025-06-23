@@ -18,8 +18,10 @@ int gameMode;
 int number_of_lines;
 int isStopShoot = false;
 extern int lines,mode;
+extern uint16_t joystickX;
+extern uint8_t joystickButton;
 int randColor(){
-    return rand() % 4 + 1;
+    return 1;
 }
 void addRowEgg(){
     for(int i=0;i<arrEggLen;i++){
@@ -32,20 +34,57 @@ void addRowEgg(){
         arrEgg[arrEggLen++] = Egg(sizeEgg*i+(1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2,0,randColor());
     }
 }
-void destroyEgg(Egg e){
-    for(int i=0;i<arrEggLen;i++){
-        if(isCollide(arrEgg[i],e)&&arrEgg[i].c==e.c&&visited[i]==0){
-            desEgg[desEggLen++]=i;
-            visited[i]=1;
-            destroyEgg(arrEgg[i]);
+//void destroyEgg(Egg e){
+//    for(int i=0;i<arrEggLen;i++){
+//        if(isCollide(arrEgg[i],e)&&arrEgg[i].c==e.c&&visited[i]==0){
+//            desEgg[desEggLen++]=i;
+//            visited[i]=1;
+//            destroyEgg(arrEgg[i]);
+//        }
+//    }
+//}
+//void updateStatus(Egg e){
+//    for(int i=0;i<arrEggLen;i++){
+//        if(isCollide(e,arrEgg[i])&&statusEgg[i]==0){
+//            statusEgg[i]=2;
+//            updateStatus(arrEgg[i]);
+//        }
+//    }
+//}
+void destroyEgg(Egg e) {
+    Egg stack[maxEggCount]; // Đặt giới hạn kích thước phù hợp với ứng dụng
+    int top = -1;
+
+    // Đưa quả trứng đầu tiên vào ngăn xếp
+    stack[++top] = e;
+
+    while (top >= 0) {
+        // Lấy quả trứng từ ngăn xếp
+        Egg current = stack[top--];
+
+        for (int i = 0; i < arrEggLen; i++) {
+            if (isCollide(arrEgg[i], current) && arrEgg[i].c == current.c && visited[i] == 0) {
+                desEgg[desEggLen++] = i;
+                visited[i] = 1;
+                stack[++top] = arrEgg[i]; // Đưa quả trứng này vào ngăn xếp để xử lý tiếp
+            }
         }
     }
 }
-void updateStatus(Egg e){
-    for(int i=0;i<arrEggLen;i++){
-        if(isCollide(e,arrEgg[i])&&statusEgg[i]==0){
-            statusEgg[i]=2;
-            updateStatus(arrEgg[i]);
+void updateStatus(Egg e) {
+    Egg stack[maxEggCount]; // Tùy chỉnh kích thước phù hợp với hệ thống
+    int top = -1;
+
+    stack[++top] = e;
+
+    while (top >= 0) {
+        Egg current = stack[top--];
+
+        for (int i = 0; i < arrEggLen; i++) {
+            if (isCollide(current, arrEgg[i]) && statusEgg[i] == 0) {
+                statusEgg[i] = 2;
+                stack[++top] = arrEgg[i];
+            }
         }
     }
 }
@@ -234,19 +273,19 @@ void Screen2View::tearDownScreen()
 void Screen2View::handleTickEvent()
 {
     Screen2ViewBase::handleTickEvent();
-    if(leftEvent==1){
+    if(leftEvent==1 || joystickX <100){
     	if(tickCount>290) tickCount--;
     	gun.updateZAngle((tickCount%360)*3.14f/180);
     	line.updateZAngle((tickCount%360)*3.14f/180);
     	leftEvent=0;
     }
-    if(rightEvent==1){
+    if(rightEvent==1 || joystickX > 4050){
     	if(tickCount<430) tickCount++;
     	gun.updateZAngle((tickCount%360)*3.14f/180);
     	line.updateZAngle((tickCount%360)*3.14f/180);
     	rightEvent=0;
     }
-    if(isShoot==1){
+    if(isShoot==1 ){
     	Egg e = Egg(egg1.getX(),egg1.getY()-30,egg1Color);
     	if(isStop(e)==0&&egg1.getY()>=30){
     	if(egg1.getX()<=0||egg1.getX()>=(240-sizeEgg)) speedx = -speedx;
@@ -341,6 +380,10 @@ void Screen2View::handleTickEvent()
         egg2.invalidate();
         isShoot=0;
     }
+//    if (joystickButton == 1 && isShoot == 0) {
+//        joystickButton = 0;
+//        Shoot();
+//    }
 }
 
 void Screen2View::Shoot()
