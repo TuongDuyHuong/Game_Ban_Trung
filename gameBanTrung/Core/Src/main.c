@@ -93,7 +93,7 @@ const osThreadAttr_t GUI_Task_attributes = {
 /* USER CODE BEGIN PV */
 uint8_t isRevD = 0; /* Applicable only for STM32F429I DISCOVERY REVD and above */
 uint16_t joystickX;
-uint16_t joystickButton = 0;
+uint16_t btShoot = 0;
 /* Definitions for polling_task */
 osThreadId_t polling_taskHandle;
 const osThreadAttr_t polling_task_attributes = {
@@ -693,6 +693,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PA5 */
+  GPIO_InitStruct.Pin = GPIO_PIN_5;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
   /*Configure GPIO pins : PD12 PD13 */
   GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -1039,14 +1045,14 @@ void StartHardwarePollingTask(void *argument)
 
      joystickX = HAL_ADC_GetValue(&hadc1);
 
-     if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_SET) {
+     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5) == GPIO_PIN_RESET) {
          // Nút đang được nhấn
-         joystickButton = 0;
+    	 btShoot = 1;
      } else {
          // Nút không nhấn
-         joystickButton = 1;
+    	 btShoot = 0;
      }
-     osDelay(1);
+     osDelay(100);
     }
   /* USER CODE END StartHardwarePollingTask */
 }

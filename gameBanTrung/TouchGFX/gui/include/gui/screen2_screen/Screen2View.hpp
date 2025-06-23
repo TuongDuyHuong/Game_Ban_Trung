@@ -28,6 +28,7 @@ extern int head[lenRow+1];
 extern int headLen;
 extern int isEvenRow;
 extern int isStopShoot;
+
 int randColor();
 void addRowEgg();
 void destroyEgg(Egg e);

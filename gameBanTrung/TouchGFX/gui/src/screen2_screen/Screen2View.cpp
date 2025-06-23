@@ -4,6 +4,8 @@
 #include<math.h>
 #include <cstdlib>
 #include <iostream>
+#include <cstring>
+
 Egg::Egg(int x, int y, int c) : x(x), y(y), c(c) {}
 Egg arrEgg[maxEggCount];
 int isEvenRow = 0;
@@ -19,7 +21,7 @@ int number_of_lines;
 int isStopShoot = false;
 extern int lines,mode;
 extern uint16_t joystickX;
-extern uint8_t joystickButton;
+extern uint16_t btShoot;
 int randColor(){
     // return rand()%4+1;
     return 1;
@@ -391,10 +393,10 @@ void Screen2View::handleTickEvent()
         egg2.invalidate();
         isShoot=0;
     }
-//    if (joystickButton == 1 && isShoot == 0) {
-//        joystickButton = 0;
-//        Shoot();
-//    }
+    if (btShoot == 1 && isShoot == 0) {
+    	btShoot = 0;
+        Shoot();
+    }
 }
 
 void Screen2View::Shoot()
