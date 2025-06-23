@@ -16,8 +16,8 @@ struct Egg {
 #define sizeEgg 24
 #define lenRow 10
 #define maxEggCount 90
-#define startShootx 108
-#define startShooty 279
+#define startShootx 110
+#define startShooty 276
 extern Egg arrEgg[maxEggCount];
 extern int arrEggLen;
 extern int statusEgg[maxEggCount];
@@ -34,7 +34,7 @@ void destroyEgg(Egg e);
 void updateStatus(Egg e);
 void standardization(Egg &e);
 int distance(Egg e, int x, int y);
-void updateGridEgg(Egg e);
+void updateGridEgg(Egg &e);
 int isCollide(Egg e1, Egg e2);
 int isFinishGame();
 int isStop(Egg e);

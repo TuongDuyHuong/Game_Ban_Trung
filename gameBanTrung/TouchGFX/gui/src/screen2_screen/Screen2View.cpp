@@ -21,6 +21,7 @@ extern int lines,mode;
 extern uint16_t joystickX;
 extern uint8_t joystickButton;
 int randColor(){
+    // return rand()%4+1;
     return 1;
 }
 void addRowEgg(){
@@ -108,8 +109,9 @@ void standardization(Egg &e){
             return;
         }
     }
-    if(e.y==0){
+    if(e.y<=0){
     	//1:8 0:24
+        e.y=0;
     	int marginLeft = (1-isEvenRow)*(sizeEgg/2)+(240-sizeEgg*lenRow)/2;
     	int x = (e.x-marginLeft)/sizeEgg;
     	if(distance(e,x*sizeEgg+marginLeft,0)>distance(e,x*sizeEgg+sizeEgg+marginLeft,0)){
@@ -120,7 +122,7 @@ void standardization(Egg &e){
 int distance(Egg e,int x,int y){
     return (e.x-x)*(e.x-x)+(e.y-y)*(e.y-y);
 }
-void updateGridEgg(Egg e){
+void updateGridEgg(Egg &e){
     standardization(e);
     Egg tmp[maxEggCount];
     int tmpLen = 0;
@@ -251,6 +253,11 @@ Screen2View::Screen2View()
 void Screen2View::setupScreen()
 {
     Screen2ViewBase::setupScreen();
+    memset(arrEgg, 0, sizeof(arrEgg));
+    memset(statusEgg, 0, sizeof(statusEgg));
+    memset(visited, 0, sizeof(visited));
+    memset(desEgg, 0, sizeof(desEgg));
+    memset(head, 0, sizeof(head));
     arrEggLen=0;
     isEvenRow=0;
     lines = number_of_lines;
@@ -299,6 +306,10 @@ void Screen2View::handleTickEvent()
     		isShoot=0;
     		isFall=1;
     		updateGridEgg(e);
+            egg1.invalidate();
+            egg1.setXY(e.x,e.y+30);
+            egg1.invalidate();
+            // Show();
     	}
     }
     if(isFall==1){
@@ -390,11 +401,11 @@ void Screen2View::Shoot()
 {
 	if(isShoot==0){
 	if(360>tickCount){
-	speedx = 2*sin((360-tickCount)*3.14f/180);
-	speedy = 2*cos((360-tickCount)*3.14f/180);
+	speedx = 3*sin((360-tickCount)*3.14f/180);
+	speedy = 3*cos((360-tickCount)*3.14f/180);
 	} else{
-	speedx = -2*sin((tickCount-360)*3.14f/180);
-	speedy = 2*cos((tickCount-360)*3.14f/180);
+	speedx = -3*sin((tickCount-360)*3.14f/180);
+	speedy = 3*cos((tickCount-360)*3.14f/180);
 	}
 	prex=egg1.getX();
 	prey=egg1.getY();

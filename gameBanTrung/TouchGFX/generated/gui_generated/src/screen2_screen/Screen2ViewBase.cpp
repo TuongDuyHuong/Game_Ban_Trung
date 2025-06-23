@@ -62,11 +62,11 @@ Screen2ViewBase::Screen2ViewBase() :
     line.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
     add(line);
 
-    gun.setXY(44, 212);
+    gun.setXY(46, 212);
     gun.setBitmap(touchgfx::Bitmap(BITMAP_GUN_ID));
     gun.setWidth(152);
     gun.setHeight(152);
-    gun.setBitmapPosition(52.0f, 27.0f);
+    gun.setBitmapPosition(52.0f, 28.0f);
     gun.setScale(1.0f);
     gun.setCameraDistance(1000.0f);
     gun.setOrigo(76.0f, 76.0f, 1000.0f);
@@ -75,7 +75,7 @@ Screen2ViewBase::Screen2ViewBase() :
     gun.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
     add(gun);
 
-    egg1.setXY(110, 279);
+    egg1.setXY(110, 276);
     egg1.setBitmap(touchgfx::Bitmap(BITMAP_EGG_RED_ID));
     add(egg1);
 }
