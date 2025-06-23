@@ -196,6 +196,21 @@
             "Width": 24,
             "Height": 24,
             "RelativeFilename": "egg_red.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "point",
+            "X": 173,
+            "Width": 67,
+            "Height": 20,
+            "TextId": "__SingleUse_T762",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 250,
+              "Green": 250,
+              "Blue": 250
+            },
+            "Wildcard1": {}
           }
         ],
         "Interactions": [
@@ -564,6 +579,22 @@
             "Width": 240,
             "Height": 320,
             "RelativeFilename": "lose_screen.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "point",
+            "X": 80,
+            "Y": 160,
+            "Width": 67,
+            "Height": 20,
+            "TextId": "__SingleUse_GZZ9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 250,
+              "Green": 250,
+              "Blue": 250
+            },
+            "Wildcard1": {}
           }
         ],
         "Interactions": [

@@ -4,6 +4,7 @@
 #include <gui_generated/lose_screen_screen/Lose_ScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Lose_ScreenViewBase::Lose_ScreenViewBase() :
     flexButtonCallback(this, &Lose_ScreenViewBase::flexButtonCallbackHandler)
@@ -22,6 +23,12 @@ Lose_ScreenViewBase::Lose_ScreenViewBase() :
     image1.setXY(0, 0);
     image1.setBitmap(touchgfx::Bitmap(BITMAP_LOSE_SCREEN_ID));
     add(image1);
+
+    point.setPosition(80, 160, 67, 20);
+    point.setColor(touchgfx::Color::getColorFromRGB(250, 250, 250));
+    point.setLinespacing(0);
+    point.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GZZ9));
+    add(point);
 }
 
 Lose_ScreenViewBase::~Lose_ScreenViewBase()

@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Lose_ScreenViewBase : public touchgfx::View<Lose_ScreenPresenter>
 {
@@ -29,6 +30,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1;
     touchgfx::Image image1;
+    touchgfx::TextAreaWithOneWildcard point;
 
 private:
 

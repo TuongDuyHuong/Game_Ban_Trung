@@ -17,7 +17,9 @@ int visited[maxEggCount];
 int gameMode;
 int number_of_lines;
 int isStopShoot = false;
-extern int lines,mode;
+int oldScore = 0;
+int finalScore;
+extern int lines;
 int randColor(){
     return rand() % 4 + 1;
 }
@@ -130,19 +132,7 @@ void updateGridEgg(Egg e){
         }
     }
 }
-void deleteEggDesAndFall(){
-	    Egg tmp[maxEggCount];
-	    int tmpLen = 0;
-	    for(int i=0;i<arrEggLen;i++){
-	        if(arrEgg[i].c<5) {
-	            tmp[tmpLen++] = arrEgg[i];
-	        }
-	    }
-	    arrEggLen=tmpLen;
-	    for(int i=0;i<arrEggLen;i++){
-	            arrEgg[i]=tmp[i];
-	    }
-}
+
 int isCollide(Egg e1,Egg e2){
 	if(e1.c>4||e2.c>4) return 0;
     if(abs(e1.x - e2.x)==0&&abs(e1.y-e2.y)==0) return 0;
@@ -203,7 +193,6 @@ int CountEggsonScreen()
     }
     return count;
 }
-
 Screen2View::Screen2View()
 {
 
@@ -215,6 +204,7 @@ void Screen2View::setupScreen()
     arrEggLen=0;
     isEvenRow=0;
     lines = number_of_lines;
+    score = oldScore;
     egg1Color = randColor();
     egg2Color = randColor();
     egg1.setBitmap(getEggBitmap(egg1Color));
@@ -225,6 +215,7 @@ void Screen2View::setupScreen()
     egg2.invalidate();
     addRowEgg();
     Show();
+    updatePoint(score);
 }
 
 void Screen2View::tearDownScreen()
@@ -289,12 +280,15 @@ void Screen2View::handleTickEvent()
 				image[i].setVisible(true);
 			}
 		}
+        score += CalculateScore();
     	deleteEggDesAndFall();
         if(gameMode == 0)
         {
             if(CountEggsonScreen()==0)
             {
                 if(lines ==0 ) {
+                    oldScore = score;
+                    updatePoint(score);
                     application().gotoWin_ScreenScreenNoTransition();
                     number_of_lines ++;
                     return;
@@ -320,13 +314,13 @@ void Screen2View::handleTickEvent()
         }
         else 
         {
-            //neu het trung thi cong diem
             if(CountEggsonScreen()==0) addRowEgg();
             else if(!isStopShoot) addRowEgg();
             else isStopShoot = false;
         }
         Show();
         if(isFinishGame()==1){
+            finalScore = score;
             application().gotoLose_ScreenScreenNoTransition();
             return;
         }
@@ -340,6 +334,7 @@ void Screen2View::handleTickEvent()
         egg1.invalidate();
         egg2.invalidate();
         isShoot=0;
+        updatePoint(score);
     }
 }
 
@@ -377,5 +372,34 @@ void Screen2View::Swap()
 	egg1.invalidate();
 	egg2.invalidate();
 }
+int Screen2View::CalculateScore()
+{
+    int fallenEggs = 0;
+    for(int i=0;i<arrEggLen;i++){
+	        if(arrEgg[i].c>=5) {
+	            fallenEggs++;
+	        }
+	    }
+    return (fallenEggs-2 > 0 ? fallenEggs-2 : 0)*10;
+}
+void deleteEggDesAndFall(){
+	    Egg tmp[maxEggCount];
+	    int tmpLen = 0;
+	    for(int i=0;i<arrEggLen;i++){
+	        if(arrEgg[i].c<5) {
+	            tmp[tmpLen++] = arrEgg[i];
+	        }
+	    }
+	    arrEggLen=tmpLen;
+	    for(int i=0;i<arrEggLen;i++){
+	            arrEgg[i]=tmp[i];
+	    }
+}
 
+void Screen2View::updatePoint(int score)
+{
+    Unicode::snprintf(txtBuffer, POINT_SIZE, "%d", score);
+    point.setWildcard(txtBuffer);
+    point.invalidate();
+}
 

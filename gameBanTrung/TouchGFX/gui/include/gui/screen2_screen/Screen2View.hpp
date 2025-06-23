@@ -18,6 +18,7 @@ struct Egg {
 #define maxEggCount 100
 #define startShootx 108
 #define startShooty 279
+#define POINT_SIZE 10
 extern Egg arrEgg[maxEggCount];
 extern int arrEggLen;
 extern int statusEgg[maxEggCount];
@@ -28,6 +29,8 @@ extern int head[lenRow+1];
 extern int headLen;
 extern int isEvenRow;
 extern int isStopShoot;
+extern int oldScore;
+extern int finalScore;
 int randColor();
 void addRowEgg();
 void destroyEgg(Egg e);
@@ -62,13 +65,16 @@ public:
     float speedy=0;
     float prex,prey;
     int lines;
-    int mode;
+    int score;
     touchgfx::BitmapId getEggBitmap(int color);
     touchgfx::Image image[100];
     int imageLen=0;
     int isFall=0;
     int isFinishFall=0;
     void Show();
+    int CalculateScore();
+    Unicode::UnicodeChar txtBuffer[20];
+    void updatePoint(int score);
 protected:
 
 };

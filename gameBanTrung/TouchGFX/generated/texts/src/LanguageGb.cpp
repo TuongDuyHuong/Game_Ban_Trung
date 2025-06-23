@@ -11,6 +11,8 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE;
 TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     0,  // T_GAMEOVER: "GAME OVER"
-    19, // T_YOU_WIN: "You Win"
+    19, // T___SINGLEUSE_GZZ9: "<>"
+    19, // T___SINGLEUSE_T762: "<>"
+    21, // T_YOU_WIN: "You Win"
     10  // T_T_GAMEOVER: "New Text"
 };

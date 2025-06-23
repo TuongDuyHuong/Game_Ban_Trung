@@ -18,7 +18,7 @@ void Screen1_5View::tearDownScreen()
 void Screen1_5View::set_classic_mode()
 {
     gameMode = 0;
-    number_of_lines = 3;
+    number_of_lines = 10;
 }
 void Screen1_5View::set_new_mode()
 {

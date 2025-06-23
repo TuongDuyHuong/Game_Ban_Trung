@@ -4,6 +4,7 @@
 #include <gui_generated/screen2_screen/Screen2ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen2ViewBase::Screen2ViewBase() :
     buttonCallback(this, &Screen2ViewBase::buttonCallbackHandler)
@@ -78,6 +79,12 @@ Screen2ViewBase::Screen2ViewBase() :
     egg1.setXY(110, 279);
     egg1.setBitmap(touchgfx::Bitmap(BITMAP_EGG_RED_ID));
     add(egg1);
+
+    point.setPosition(173, 0, 67, 20);
+    point.setColor(touchgfx::Color::getColorFromRGB(250, 250, 250));
+    point.setLinespacing(0);
+    point.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T762));
+    add(point);
 }
 
 Screen2ViewBase::~Screen2ViewBase()
