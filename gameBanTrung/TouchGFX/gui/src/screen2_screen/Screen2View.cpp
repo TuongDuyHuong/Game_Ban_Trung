@@ -5,7 +5,9 @@
 #include <cstdlib>
 #include <iostream>
 #include <cstring>
-
+extern "C" {
+#include "main.h"   // để dùng HAL_GPIO_WritePin, HAL_Delay
+}
 Egg::Egg(int x, int y, int c) : x(x), y(y), c(c) {}
 Egg arrEgg[maxEggCount];
 int isEvenRow = 0;
@@ -412,6 +414,9 @@ void Screen2View::Shoot()
 	prey=egg1.getY();
 	}
 	isShoot=1;
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+	HAL_Delay(200);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 //	Show();
 }
 void Screen2View::Left()
