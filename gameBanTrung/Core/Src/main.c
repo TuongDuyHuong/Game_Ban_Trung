@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Components/ili9341/ili9341.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -1045,13 +1046,12 @@ void StartHardwarePollingTask(void *argument)
 
      joystickX = HAL_ADC_GetValue(&hadc1);
 
-     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5) == GPIO_PIN_RESET) {
-         // Nút đang được nhấn
-    	 btShoot = 1;
-     } else {
-         // Nút không nhấn
-    	 btShoot = 0;
-     }
+     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5) == GPIO_PIN_SET) {
+
+    		 btShoot = 0;
+    		 osDelay(100);
+     } else
+    	 btShoot =1;
      osDelay(100);
     }
   /* USER CODE END StartHardwarePollingTask */
