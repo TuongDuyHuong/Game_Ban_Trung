@@ -95,6 +95,7 @@ const osThreadAttr_t GUI_Task_attributes = {
 uint8_t isRevD = 0; /* Applicable only for STM32F429I DISCOVERY REVD and above */
 uint16_t joystickX;
 uint16_t btShoot = 0;
+uint16_t btSwap = 0;
 /* Definitions for polling_task */
 osThreadId_t polling_taskHandle;
 const osThreadAttr_t polling_task_attributes = {
@@ -701,6 +702,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PG13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+
   /* USER CODE BEGIN MX_GPIO_Init_2 */
   /* USER CODE END MX_GPIO_Init_2 */
 }
@@ -1044,10 +1051,22 @@ void StartHardwarePollingTask(void *argument)
 
     		 btShoot = 0;
     		 osDelay(100);
-     } else{
+     } else if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5) == GPIO_PIN_RESET){
     	 btShoot =1;
 
      }
+     if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_13) == GPIO_PIN_SET) {
+             HAL_Delay(20);  // đợi 20ms
+             if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_13) == GPIO_PIN_SET) {
+
+                 btSwap = 1;
+                 osDelay(100);
+             }
+         } else if (HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_13) == GPIO_PIN_RESET){
+        	 btSwap= 0;
+        	 osDelay(100);
+         }
+
 
      osDelay(100);
     }

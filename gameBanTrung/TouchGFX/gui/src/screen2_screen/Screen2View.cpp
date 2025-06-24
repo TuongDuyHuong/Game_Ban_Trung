@@ -28,6 +28,7 @@ extern int lines;
 //=======
 extern uint16_t joystickX;
 extern uint16_t btShoot;
+extern uint16_t btSwap;
 static uint32_t seed = 1;
 // >>>>>>> 491ddca3bae796dbc68b54778639f2c8ff327626
 int randColor(){
@@ -398,6 +399,10 @@ void Screen2View::handleTickEvent()
     	btShoot = 0;
         Shoot();
     }
+    if (btSwap == 1 ) {
+    	btSwap = 0;
+            Swap();
+        }
 }
 
 void Screen2View::Shoot()
