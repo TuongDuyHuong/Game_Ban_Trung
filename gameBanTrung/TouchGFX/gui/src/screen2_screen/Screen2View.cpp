@@ -264,8 +264,8 @@ void Screen2View::setupScreen()
     egg2Color = randColor();
     egg1.setBitmap(getEggBitmap(egg1Color));
     egg2.setBitmap(getEggBitmap(egg2Color));
-    line.updateZAngle((tickCount%360)*3.14f/180);
-    gun.updateZAngle((tickCount%360)*3.14f/180);
+    line.updateZAngle((tickCount)*3.14f/180);
+    gun.updateZAngle((tickCount)*3.14f/180);
     egg1.invalidate();
     egg2.invalidate();
     addRowEgg();
@@ -280,16 +280,27 @@ void Screen2View::tearDownScreen()
 void Screen2View::handleTickEvent()
 {
     Screen2ViewBase::handleTickEvent();
-    if(leftEvent==1 || joystickX >1000){
-    	if(tickCount>290) tickCount--;
-    	gun.updateZAngle((tickCount%360)*3.14f/180);
-    	line.updateZAngle((tickCount%360)*3.14f/180);
+    if( joystickX>=1000 && joystickX<1600){
+        	if(tickCount>290) tickCount-= 0.1;
+        	gun.updateZAngle((tickCount)*3.14f/180);
+        	line.updateZAngle((tickCount)*3.14f/180);
+        }
+    if( joystickX>2500 && joystickX<=3000){
+            	if(tickCount>290) tickCount-= 0.1;
+            	gun.updateZAngle((tickCount)*3.14f/180);
+            	line.updateZAngle((tickCount)*3.14f/180);
+            }
+
+    if(leftEvent==1 || joystickX<1000){
+    	if(tickCount>290) tickCount-= 0.3;
+    	gun.updateZAngle((tickCount)*3.14f/180);
+    	line.updateZAngle((tickCount)*3.14f/180);
     	leftEvent=0;
     }
-    if(rightEvent==1 || joystickX <10){
-    	if(tickCount<430) tickCount++;
-    	gun.updateZAngle((tickCount%360)*3.14f/180);
-    	line.updateZAngle((tickCount%360)*3.14f/180);
+    if(rightEvent==1 || joystickX>3000){
+    	if(tickCount<430) tickCount+=0.3;
+    	gun.updateZAngle((tickCount)*3.14f/180);
+    	line.updateZAngle((tickCount)*3.14f/180);
     	rightEvent=0;
     }
     if(isShoot==1 ){

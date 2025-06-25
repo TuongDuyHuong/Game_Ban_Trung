@@ -25,7 +25,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Components/ili9341/ili9341.h"
-
+#include "string.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -98,6 +99,7 @@ uint8_t isRevD = 0; /* Applicable only for STM32F429I DISCOVERY REVD and above *
 uint16_t joystickX;
 uint16_t btShoot = 0;
 uint16_t btSwap = 0;
+
 /* Definitions for polling_task */
 osThreadId_t polling_taskHandle;
 const osThreadAttr_t polling_task_attributes = {
@@ -332,7 +334,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = DISABLE;
-  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.ContinuousConvMode = ENABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
@@ -347,7 +349,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
-  sConfig.Channel = ADC_CHANNEL_1;
+  sConfig.Channel = ADC_CHANNEL_13;
   sConfig.Rank = 1;
   sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -1083,6 +1085,7 @@ void StartHardwarePollingTask(void *argument)
      HAL_ADC_PollForConversion (&hadc1, 1);
 
      joystickX = HAL_ADC_GetValue(&hadc1);
+
      char s[10];
      sprintf(s, "%d\n", joystickX);
      HAL_UART_Transmit(&huart1, s, strlen(s), 10);
@@ -1108,7 +1111,7 @@ void StartHardwarePollingTask(void *argument)
          }
 
 
-     osDelay(100);
+     osDelay(1);
     }
   /* USER CODE END StartHardwarePollingTask */
 }

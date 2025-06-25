@@ -53,7 +53,7 @@ public:
     virtual void Left();
     virtual void Right();
     virtual void Swap();
-    uint32_t tickCount = 290;
+    float tickCount = 290.0f;
     int leftEvent = 0;
     int rightEvent = 0;
     int egg1Color;
