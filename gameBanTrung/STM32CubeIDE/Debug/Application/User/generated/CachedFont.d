@@ -1,5 +1,5 @@
 Application/User/generated/CachedFont.o: \
- D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/CachedFont.cpp \
+ D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/CachedFont.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/CachedFont.hpp \
  ../../TouchGFX/generated/fonts/include/fonts/FontCache.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

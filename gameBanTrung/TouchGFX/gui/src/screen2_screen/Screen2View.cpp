@@ -280,13 +280,13 @@ void Screen2View::tearDownScreen()
 void Screen2View::handleTickEvent()
 {
     Screen2ViewBase::handleTickEvent();
-    if(leftEvent==1 || joystickX <100){
+    if(leftEvent==1 || joystickX >1000){
     	if(tickCount>290) tickCount--;
     	gun.updateZAngle((tickCount%360)*3.14f/180);
     	line.updateZAngle((tickCount%360)*3.14f/180);
     	leftEvent=0;
     }
-    if(rightEvent==1 || joystickX > 4050){
+    if(rightEvent==1 || joystickX <10){
     	if(tickCount<430) tickCount++;
     	gun.updateZAngle((tickCount%360)*3.14f/180);
     	line.updateZAngle((tickCount%360)*3.14f/180);

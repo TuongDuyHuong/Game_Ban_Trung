@@ -1,5 +1,5 @@
 Application/User/generated/Screen1_5ViewBase.o: \
- D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen1_5_screen/Screen1_5ViewBase.cpp \
+ D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen1_5_screen/Screen1_5ViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen1_5_screen/Screen1_5ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

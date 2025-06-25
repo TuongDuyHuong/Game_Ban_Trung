@@ -1,5 +1,5 @@
 Application/User/generated/Table_verdana_10_4bpp.o: \
- D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp \
+ D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

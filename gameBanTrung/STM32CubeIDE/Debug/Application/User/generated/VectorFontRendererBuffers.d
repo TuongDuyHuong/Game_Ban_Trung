@@ -1,5 +1,5 @@
 Application/User/generated/VectorFontRendererBuffers.o: \
- D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/VectorFontRendererBuffers.cpp \
+ D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/VectorFontRendererBuffers.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/VectorFontRendererImpl.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \

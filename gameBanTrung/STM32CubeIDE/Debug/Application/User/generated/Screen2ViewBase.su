@@ -30,16 +30,16 @@
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen2Presenter>::~View()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen2ViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:90:1:Screen2ViewBase::~Screen2ViewBase()	0	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:95:6:virtual void Screen2ViewBase::setupScreen()	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:90:1:Screen2ViewBase::~Screen2ViewBase()	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:95:6:virtual void Screen2ViewBase::setupScreen()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen2ViewBase; T1 = const touchgfx::AbstractButton&]	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen2ViewBase; T1 = const touchgfx::AbstractButton&]	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen2Presenter>::~View()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen2ViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:90:1:virtual Screen2ViewBase::~Screen2ViewBase()	8	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:100:6:void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:90:1:virtual Screen2ViewBase::~Screen2ViewBase()	8	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:100:6:void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
@@ -49,4 +49,4 @@ D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/scre
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	16	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:9:1:Screen2ViewBase::Screen2ViewBase()	128	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:9:1:Screen2ViewBase::Screen2ViewBase()	128	static

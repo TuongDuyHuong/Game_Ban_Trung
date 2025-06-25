@@ -1,10 +1,10 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:14:6:virtual void Screen1_5View::tearDownScreen()	0	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:18:6:virtual void Screen1_5View::set_classic_mode()	0	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:23:6:virtual void Screen1_5View::set_new_mode()	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:14:6:virtual void Screen1_5View::tearDownScreen()	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:18:6:virtual void Screen1_5View::set_classic_mode()	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:23:6:virtual void Screen1_5View::set_new_mode()	0	static
 ../../TouchGFX/gui/include/gui/screen1_5_screen/Screen1_5View.hpp:16:13:Screen1_5View::~Screen1_5View()	8	static
 ../../TouchGFX/gui/include/gui/screen1_5_screen/Screen1_5View.hpp:16:13:virtual Screen1_5View::~Screen1_5View()	8	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:4:1:Screen1_5View::Screen1_5View()	8	static
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:9:6:virtual void Screen1_5View::setupScreen()	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:4:1:Screen1_5View::Screen1_5View()	8	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5View.cpp:9:6:virtual void Screen1_5View::setupScreen()	0	static

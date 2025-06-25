@@ -1,5 +1,5 @@
 Application/User/generated/Kerning_verdana_10_4bpp.o: \
- D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp \
+ D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

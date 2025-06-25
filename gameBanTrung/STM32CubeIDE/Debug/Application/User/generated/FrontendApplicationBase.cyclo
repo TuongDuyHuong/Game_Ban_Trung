@@ -29,18 +29,18 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:87:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::EAST]	4
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:87:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::WEST]	4
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:61:6:void FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWestImpl()	8
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:87:6:void FrontendApplicationBase::gotoScreen1_5ScreenSlideTransitionEastImpl()	8
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:61:6:void FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWestImpl()	8
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:87:6:void FrontendApplicationBase::gotoScreen1_5ScreenSlideTransitionEastImpl()	8
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:308:17:static touchgfx::LCD& touchgfx::HAL::lcd()	3
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:25:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	1
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:44:6:void FrontendApplicationBase::gotoScreen1ScreenNoTransition()	1
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:55:6:void FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWest()	1
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:68:6:void FrontendApplicationBase::gotoScreen2ScreenNoTransition()	1
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:81:6:void FrontendApplicationBase::gotoScreen1_5ScreenSlideTransitionEast()	1
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:94:6:void FrontendApplicationBase::gotoWin_ScreenScreenNoTransition()	1
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:107:6:void FrontendApplicationBase::gotoLose_ScreenScreenNoTransition()	1
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:25:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	1
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:44:6:void FrontendApplicationBase::gotoScreen1ScreenNoTransition()	1
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:55:6:void FrontendApplicationBase::gotoScreen1ScreenSlideTransitionWest()	1
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:68:6:void FrontendApplicationBase::gotoScreen2ScreenNoTransition()	1
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:81:6:void FrontendApplicationBase::gotoScreen1_5ScreenSlideTransitionEast()	1
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:94:6:void FrontendApplicationBase::gotoWin_ScreenScreenNoTransition()	1
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:107:6:void FrontendApplicationBase::gotoLose_ScreenScreenNoTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	1
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:113:6:void FrontendApplicationBase::gotoLose_ScreenScreenNoTransitionImpl()	7
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:100:6:void FrontendApplicationBase::gotoWin_ScreenScreenNoTransitionImpl()	7
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:74:6:void FrontendApplicationBase::gotoScreen2ScreenNoTransitionImpl()	7
-D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:50:6:void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()	7
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:113:6:void FrontendApplicationBase::gotoLose_ScreenScreenNoTransitionImpl()	7
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:100:6:void FrontendApplicationBase::gotoWin_ScreenScreenNoTransitionImpl()	7
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:74:6:void FrontendApplicationBase::gotoScreen2ScreenNoTransitionImpl()	7
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:50:6:void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()	7

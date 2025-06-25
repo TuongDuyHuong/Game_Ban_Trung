@@ -1,5 +1,5 @@
 Application/User/gui/Win_ScreenPresenter.o: \
- D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenPresenter.cpp \
+ D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenPresenter.cpp \
  ../../TouchGFX/gui/include/gui/win_screen_screen/Win_ScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/win_screen_screen/Win_ScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

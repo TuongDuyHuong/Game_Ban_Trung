@@ -1,5 +1,5 @@
 Application/User/generated/UnmappedDataFont.o: \
- D:/project/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/UnmappedDataFont.cpp \
+ D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/UnmappedDataFont.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FlashDataReader.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \
