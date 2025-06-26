@@ -13,9 +13,9 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:276:6:virtual void Screen2View::tearDownScreen()	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:438:6:virtual void Screen2View::Left()	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:442:6:virtual void Screen2View::Right()	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:419:6:virtual void Screen2View::Shoot()	24	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:440:6:virtual void Screen2View::Left()	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:444:6:virtual void Screen2View::Right()	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:421:6:virtual void Screen2View::Shoot()	24	static
 ../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:48:13:Screen2View::~Screen2View()	16	static
 ../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:48:13:virtual Screen2View::~Screen2View()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
@@ -34,13 +34,13 @@ D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.c
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:192:5:int isFinishGame()	0	static
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:198:5:int isStop(Egg)	48	static
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:204:20:touchgfx::BitmapId Screen2View::getEggBitmap(int)	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:446:6:virtual void Screen2View::Swap()	24	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:448:6:virtual void Screen2View::Swap()	24	static
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:236:5:int CountEggsonScreen()	8	static
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:246:1:Screen2View::Screen2View()	40	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:456:5:int Screen2View::CalculateScore()	8	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:466:6:void deleteEggDesAndFall()	1232	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:480:6:void Screen2View::updatePoint(int)	16	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:485:1:cpp)	0	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:458:5:int Screen2View::CalculateScore()	8	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:468:6:void deleteEggDesAndFall()	1232	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:482:6:void Screen2View::updatePoint(int)	16	static
+D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:487:1:cpp)	0	static
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:215:6:void Screen2View::Show()	48	static
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:280:6:virtual void Screen2View::handleTickEvent()	64	static
 D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:251:6:virtual void Screen2View::setupScreen()	32	static

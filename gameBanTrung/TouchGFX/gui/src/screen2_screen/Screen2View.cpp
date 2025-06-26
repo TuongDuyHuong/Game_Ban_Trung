@@ -412,7 +412,9 @@ void Screen2View::handleTickEvent()
     }
     if (btSwap == 1 ) {
     	btSwap = 0;
-            Swap();
+
+        Swap();
+        HAL_Delay(500);
         }
 }
 
