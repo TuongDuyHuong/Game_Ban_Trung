@@ -8,6 +8,7 @@
 extern "C" {
 #include "main.h"   // để dùng HAL_GPIO_WritePin, HAL_Delay
 }
+#include <random>
 Egg::Egg(int x, int y, int c) : x(x), y(y), c(c) {}
 Egg arrEgg[maxEggCount];
 int isEvenRow = 0;
@@ -29,11 +30,14 @@ extern int lines;
 extern uint16_t joystickX;
 extern uint16_t btShoot;
 extern uint16_t btSwap;
-static uint32_t seed = 1;
+//static uint32_t seed = 1;
 // >>>>>>> 491ddca3bae796dbc68b54778639f2c8ff327626
 int randColor(){
-	seed = seed * 1103515245 + 12345;
-	return (seed % 4) + 1;  // kết quả là 1, 2, 3 hoặc 4;
+//	seed = seed * 1103515245 + 12345;
+//	return (seed % 4) + 1;  // kết quả là 1, 2, 3 hoặc 4;
+	static std::mt19937 rng(std::random_device{}());  // Chỉ khởi tạo 1 lần với seed từ random_device
+	    std::uniform_int_distribution<int> dist(1, 4);     // Sinh số nguyên từ 1 đến 4 (bao gồm)
+	    return dist(rng);
 }
 void addRowEgg(){
     for(int i=0;i<arrEggLen;i++){
@@ -197,7 +201,7 @@ int isFinishGame(){
 }
 int isStop(Egg e){
 	for(int i=0;i<arrEggLen;i++){
-		if(isCollide(e,arrEgg[i])==1) return 1;
+		if(isCollide(e,arrEgg[i])==1 && distance(arrEgg[i], e.x, e.y)<25*25) return 1;
 	}
 	return 0;
 }

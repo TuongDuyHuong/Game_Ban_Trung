@@ -1,5 +1,5 @@
 ../../TouchGFX/gui/include/gui/lose_screen_screen/Lose_ScreenPresenter.hpp:28:13:Lose_ScreenPresenter::~Lose_ScreenPresenter()	1
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/lose_screen_screen/Lose_ScreenPresenter.cpp:10:6:virtual void Lose_ScreenPresenter::activate()	1
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/lose_screen_screen/Lose_ScreenPresenter.cpp:10:6:virtual void Lose_ScreenPresenter::activate()	1
 ../../TouchGFX/gui/include/gui/lose_screen_screen/Lose_ScreenPresenter.hpp:28:13:virtual Lose_ScreenPresenter::~Lose_ScreenPresenter()	1
 ../../TouchGFX/gui/include/gui/lose_screen_screen/Lose_ScreenPresenter.hpp:28:13:virtual void* Lose_ScreenPresenter::_ZThn4_N20Lose_ScreenPresenterD1Ev()	1
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/lose_screen_screen/Lose_ScreenPresenter.cpp:4:1:Lose_ScreenPresenter::Lose_ScreenPresenter(Lose_ScreenView&)	1
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/lose_screen_screen/Lose_ScreenPresenter.cpp:4:1:Lose_ScreenPresenter::Lose_ScreenPresenter(Lose_ScreenView&)	1

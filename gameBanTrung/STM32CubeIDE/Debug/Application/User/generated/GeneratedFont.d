@@ -1,5 +1,5 @@
 Application/User/generated/GeneratedFont.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/GeneratedFont.cpp \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/fonts/src/GeneratedFont.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

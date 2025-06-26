@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/STM32TouchController.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/target/STM32TouchController.cpp \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/target/STM32TouchController.cpp \
  ../../TouchGFX/target/STM32TouchController.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

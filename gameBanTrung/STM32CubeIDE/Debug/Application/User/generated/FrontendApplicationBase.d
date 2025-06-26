@@ -1,5 +1,5 @@
 Application/User/generated/FrontendApplicationBase.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp \

@@ -1,5 +1,5 @@
 Application/User/generated/Win_ScreenViewBase.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/win_screen_screen/Win_ScreenViewBase.cpp \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/win_screen_screen/Win_ScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/win_screen_screen/Win_ScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

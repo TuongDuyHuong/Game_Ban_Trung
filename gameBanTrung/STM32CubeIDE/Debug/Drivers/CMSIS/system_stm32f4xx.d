@@ -1,5 +1,5 @@
 Drivers/CMSIS/system_stm32f4xx.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/system_stm32f4xx.c \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/system_stm32f4xx.c \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h \
  ../../Drivers/CMSIS/Include/core_cm4.h \

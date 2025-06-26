@@ -1,18 +1,18 @@
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:975:13:SPI5_Write	16	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1077:6:StartHardwarePollingTask	8	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1128:6:StartDefaultTask	8	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:265:6:SystemClock_Config	96	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:170:5:main	120	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:819:6:IOE_Init	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:828:6:IOE_ITConfig	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:840:6:IOE_Write	32	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:851:9:IOE_Read	32	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:864:10:IOE_ReadMultiple	24	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:873:6:IOE_Delay	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1001:6:LCD_IO_Init	8	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1011:6:LCD_IO_WriteData	16	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1027:6:LCD_IO_WriteReg	16	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1046:10:LCD_IO_ReadData	32	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1073:6:LCD_Delay	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1147:6:HAL_TIM_PeriodElapsedCallback	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1165:6:Error_Handler	0	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:975:13:SPI5_Write	16	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1077:6:StartHardwarePollingTask	8	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1128:6:StartDefaultTask	8	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:265:6:SystemClock_Config	96	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:170:5:main	120	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:819:6:IOE_Init	0	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:828:6:IOE_ITConfig	0	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:840:6:IOE_Write	32	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:851:9:IOE_Read	32	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:864:10:IOE_ReadMultiple	24	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:873:6:IOE_Delay	0	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1001:6:LCD_IO_Init	8	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1011:6:LCD_IO_WriteData	16	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1027:6:LCD_IO_WriteReg	16	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1046:10:LCD_IO_ReadData	32	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1073:6:LCD_Delay	0	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1147:6:HAL_TIM_PeriodElapsedCallback	0	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/main.c:1165:6:Error_Handler	0	static

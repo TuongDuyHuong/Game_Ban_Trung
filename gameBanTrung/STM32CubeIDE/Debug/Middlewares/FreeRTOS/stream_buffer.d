@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/stream_buffer.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

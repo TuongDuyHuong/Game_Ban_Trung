@@ -1,5 +1,5 @@
 Application/User/generated/TypedTextDatabase.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/texts/src/TypedTextDatabase.cpp \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/texts/src/TypedTextDatabase.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \

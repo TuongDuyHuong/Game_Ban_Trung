@@ -1,5 +1,5 @@
 Application/User/generated/Lose_ScreenViewBase.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/lose_screen_screen/Lose_ScreenViewBase.cpp \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/generated/gui_generated/src/lose_screen_screen/Lose_ScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/lose_screen_screen/Lose_ScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

@@ -1,5 +1,5 @@
 Application/User/freertos.o: \
- D:/pro/Game_Ban_Trung/gameBanTrung/Core/Src/freertos.c \
+ D:/Pj\ Nhúng/Game_Ban_Trung/gameBanTrung/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

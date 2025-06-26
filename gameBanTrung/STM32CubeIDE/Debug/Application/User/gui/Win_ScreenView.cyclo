@@ -2,8 +2,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/win_screen_screen/Win_ScreenViewBase.hpp:24:18:virtual void Win_ScreenViewBase::nextlevel()	1
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenView.cpp:13:6:virtual void Win_ScreenView::tearDownScreen()	1
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenView.cpp:13:6:virtual void Win_ScreenView::tearDownScreen()	1
 ../../TouchGFX/gui/include/gui/win_screen_screen/Win_ScreenView.hpp:11:13:Win_ScreenView::~Win_ScreenView()	1
 ../../TouchGFX/gui/include/gui/win_screen_screen/Win_ScreenView.hpp:11:13:virtual Win_ScreenView::~Win_ScreenView()	1
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenView.cpp:3:1:Win_ScreenView::Win_ScreenView()	1
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenView.cpp:8:6:virtual void Win_ScreenView::setupScreen()	1
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenView.cpp:3:1:Win_ScreenView::Win_ScreenView()	1
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/win_screen_screen/Win_ScreenView.cpp:8:6:virtual void Win_ScreenView::setupScreen()	1

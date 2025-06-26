@@ -1,5 +1,5 @@
 ../../TouchGFX/gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp:28:13:Screen1_5Presenter::~Screen1_5Presenter()	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5Presenter.cpp:10:6:virtual void Screen1_5Presenter::activate()	0	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5Presenter.cpp:10:6:virtual void Screen1_5Presenter::activate()	0	static
 ../../TouchGFX/gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp:28:13:virtual Screen1_5Presenter::~Screen1_5Presenter()	8	static
 ../../TouchGFX/gui/include/gui/screen1_5_screen/Screen1_5Presenter.hpp:28:13:virtual void* Screen1_5Presenter::_ZThn4_N18Screen1_5PresenterD1Ev()	0	static
-D:/pro/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5Presenter.cpp:4:1:Screen1_5Presenter::Screen1_5Presenter(Screen1_5View&)	0	static
+D:/Pj Nhúng/Game_Ban_Trung/gameBanTrung/TouchGFX/gui/src/screen1_5_screen/Screen1_5Presenter.cpp:4:1:Screen1_5Presenter::Screen1_5Presenter(Screen1_5View&)	0	static
